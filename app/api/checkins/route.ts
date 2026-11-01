@@ -24,8 +24,9 @@ export async function POST(request:Request){
  const id=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(requested)?requested:crypto.randomUUID();
  const existing=await env.DB!.prepare('SELECT id,created_at FROM checkins WHERE id=? AND user_id=?').bind(id,user.userId).first<any>();
  if(existing)return Response.json(await saveReceipt(user.userId,existing.id,existing.created_at));
- const key=user.userId+'/'+id;const created=new Date().toISOString();
+ const key=user.userId+'/'+id;
  await env.BUCKET!.put(key,video.stream(),{httpMetadata:{contentType:video.type}});
+ const created=new Date().toISOString();
  try{await env.DB!.prepare('INSERT INTO checkins (id,user_id,name,video_key,mime,bytes,created_at) VALUES (?,?,?,?,?,?,?)').bind(id,user.userId,String(form.get('name')||'Senior Member').slice(0,60),key,video.type,video.size,created).run()}catch(e){const existing=await env.DB!.prepare('SELECT id,created_at FROM checkins WHERE id=? AND user_id=?').bind(id,user.userId).first<any>();if(existing)return Response.json(await saveReceipt(user.userId,existing.id,existing.created_at));await env.BUCKET!.delete(key);throw e}
  return Response.json(await saveReceipt(user.userId,id,created));
 }

@@ -33,3 +33,7 @@ This deployment remains owner-private at the Sites access layer. The owner must 
 The Senior Member has one Cindy conversation, shared with accepted connected Caregivers. `/caregiver` provides a shared conversation tab and a separate private Caregiver tab for each connected Senior Member. Existing Senior Member history is visible in the shared conversation. Speaker IDs and names label new messages. Shared messages synchronize every four seconds, including into the Senior Member UI and voice-session context. Caregiver text messages cannot operate the Senior Member camera or recording.
 
 Private Caregiver messages use `caregiver_private_messages`, keyed by both Caregiver and Senior Member. Shared reads and shared model requests do not query that table. Private Cindy requests may read shared conversation context and check-in metadata for advice, but shared requests never read private context. Disconnecting blocks new access to both chat views for that relationship.
+
+## Chronological check-in receipts
+
+Both shared chat views merge conversation history with server-confirmed check-in records, ordered by the recorded timestamp. Each check-in produces one derived receipt with a stable `checkin:<id>` identity. The receipt survives reloads and upload retries without creating a duplicate chat entry. A failed upload has no confirmed check-in row and cannot produce a completed receipt. `/video/<id>` and its media request each validate ownership or an active Caregiver connection. The player opens in a separate tab; the shared chat stays compact and in order.

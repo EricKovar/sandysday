@@ -1,8 +1,8 @@
 import {sharingStatus} from '../../../lib/care-server';
 import {getChatGPTUser} from '../../chatgpt-auth';
 import {actions,instructions} from '../../../lib/cindy';
-import {history,remember,checkOrigin,secret,savedRecords} from '../../../lib/server-cindy';
-export async function GET(){const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in.'},{status:401});return Response.json({user_id:user.userId,messages:await history(user.userId),name:user.fullName?.split(' ')[0]||'Susan'},{headers:{'Cache-Control':'private, no-store'}})}
+import {timeline,history,remember,checkOrigin,secret,savedRecords} from '../../../lib/server-cindy';
+export async function GET(){const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in.'},{status:401});return Response.json({user_id:user.userId,messages:await timeline(user.userId),name:user.fullName?.split(' ')[0]||'Susan'},{headers:{'Cache-Control':'private, no-store'}})}
 export async function POST(request:Request){
  const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in to talk with Cindy.'},{status:401});if(!checkOrigin(request))return new Response('Forbidden',{status:403});
  const body=await request.json() as any;const text=String(body.text||'').trim();if(!text||text.length>2000)return Response.json({error:'Please send a shorter message.'},{status:400});
