@@ -37,3 +37,7 @@ Private Caregiver messages use `caregiver_private_messages`, keyed by both Careg
 ## Chronological check-in receipts
 
 Both shared chat views merge conversation history with server-confirmed check-in records, ordered by the recorded timestamp. Each check-in produces one derived receipt with a stable `checkin:<id>` identity. The receipt survives reloads and upload retries without creating a duplicate chat entry. A failed upload has no confirmed check-in row and cannot produce a completed receipt. `/video/<id>` and its media request each validate ownership or an active Caregiver connection. The player opens in a separate tab; the shared chat stays compact and in order.
+
+## Senior Member conversation controls
+
+The composer has one labeled microphone toggle, a Type a message focus button, and a Send message button. The microphone toggle pauses/resumes the WebRTC input track within the current voice session; typed replies can still receive Cindy's configured voice. Connection startup and microphone resume do not create artificial conversation turns or greeting messages. Recording audio uses an independently enabled cloned track. Speech style instructions favor contextual wording and avoid repeated canned acknowledgments; deterministic camera/save guidance cycles through equivalent factual phrasing.
