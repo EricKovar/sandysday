@@ -14,6 +14,6 @@ Not implemented: caregiver pairing/sharing, notifications, medication schedules,
 
 ## Validation
 
-Run `node node_modules/typescript/bin/tsc --noEmit`, `node --experimental-strip-types --test tests/*.test.ts`, and the Sites build helper. Live AI evaluations are in `tests/eval-cindy.mjs`; they require the local ignored credential and send synthetic scenarios only.
+Run `node node_modules/typescript/bin/tsc --noEmit`, `node --experimental-strip-types --test tests/*.test.*`, and the Sites build helper. Live AI evaluations are in `tests/eval-cindy.mjs`; they require the local ignored credential and send synthetic scenarios only.
 
 The hosting manifest retains this experiment's Site identity and isolated D1/R2 bindings. Deploy through the Sites source workflow.
