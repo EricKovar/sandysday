@@ -22,6 +22,13 @@
       "when": 1793552218358,
       "tag": "0002_open_zaran",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1793553656984,
+      "tag": "0003_sticky_gressill",
+      "breakpoints": true
     }
   ]
 }
