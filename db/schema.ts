@@ -18,3 +18,7 @@ export const careConnections=sqliteTable('care_connections',{
 export const caregiverPrivateMessages=sqliteTable('caregiver_private_messages',{
  id:text('id').primaryKey(),caregiverId:text('caregiver_id').notNull(),seniorId:text('senior_id').notNull(),role:text('role').notNull(),content:text('content').notNull(),createdAt:integer('created_at').notNull()
 });
+
+export const sparkSessions=sqliteTable('spark_sessions',{
+ userId:text('user_id').primaryKey(),state:text('state').notNull(),revision:integer('revision').notNull(),updatedAt:integer('updated_at').notNull()
+});

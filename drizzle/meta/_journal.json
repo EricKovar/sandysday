@@ -29,6 +29,13 @@
       "when": 1793553656984,
       "tag": "0003_sticky_gressill",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1793576861709,
+      "tag": "0004_smart_masque",
+      "breakpoints": true
     }
   ]
 }
