@@ -17,3 +17,13 @@ Not implemented: caregiver pairing/sharing, notifications, medication schedules,
 Run `node node_modules/typescript/bin/tsc --noEmit`, `node --experimental-strip-types --test tests/*.test.*`, and the Sites build helper. Live AI evaluations are in `tests/eval-cindy.mjs`; they require the local ignored credential and send synthetic scenarios only.
 
 The hosting manifest retains this experiment's Site identity and isolated D1/R2 bindings. Deploy through the Sites source workflow.
+
+## Care Circle and Caregiver dashboard
+
+`/care-circle` creates email-bound invitation links, shows incoming invitations and active connections, and lets either participant disconnect. A creator can be a Senior Member or a Caregiver. Both creation and acceptance explicitly disclose that sharing covers past and future saved videos. No invitation email is sent automatically. Links use a 256-bit random token in the URL fragment; only its SHA-256 hash is stored. Links expire in 7 days and are single-use. The authenticated invited email is checked before inspection or acceptance. Atomic D1 batches create the connection and consume the invitation.
+
+`/caregiver` lists recordings from accepted, active Senior Member connections. Every video and range request checks the viewer's ownership or current connection. Disconnect stops future requests; it cannot retract media that was already downloaded or buffered. Conversation history remains scoped to its author and is never included in shared results.
+
+A confirmed upload receipt includes the currently connected Caregiver names. Cindy uses that receipt for availability acknowledgments. Notification delivery is still disabled. If the sharing lookup fails after a successful upload, the recording is saved but sharing is reported as unknown.
+
+This deployment remains owner-private at the Sites access layer. The owner must also share the private Site with each tester's ChatGPT account before that tester can open an invitation. App invitations do not alter the Site's audience or hosting allowlist.
