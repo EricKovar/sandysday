@@ -1,0 +1,3 @@
+import {getChatGPTUser} from '../../chatgpt-auth';
+import {remember,checkOrigin} from '../../../lib/server-cindy';
+export async function POST(request:Request){const user=await getChatGPTUser();if(!user)return new Response('Sign in required',{status:401});if(!checkOrigin(request))return new Response('Forbidden',{status:403});const b=await request.json() as any;const role=['user','assistant','event'].includes(b.role)?b.role:'event';const content=String(b.content||'').slice(0,5000);if(!content)return new Response('Empty',{status:400});await remember(user.userId,role,role==='event'?'App event (client-reported): '+content:content);return Response.json({ok:true})}
