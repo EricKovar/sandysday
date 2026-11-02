@@ -1,8 +1,9 @@
+import {demoLimit} from '../../../lib/demo-limits';
 import { env } from 'cloudflare:workers';
-import { getChatGPTUser } from '../../chatgpt-auth';
+import {getAppUser as getChatGPTUser} from '../../../lib/app-user';
 import {saveReceipt} from '../../../lib/care-server';
 export async function GET(request:Request){
- const user=await getChatGPTUser(); if(!user)return Response.json({error:'Please sign in to view saved check-ins.'},{status:401});
+ const user=await getChatGPTUser(request); if(!user)return Response.json({error:'Please sign in to view saved check-ins.'},{status:401});
  const url=new URL(request.url);const id=url.searchParams.get('video');
  if(id){
  const row=await env.DB!.prepare('SELECT * FROM checkins WHERE id=? AND (user_id=? OR EXISTS (SELECT 1 FROM care_connections c WHERE c.senior_id=checkins.user_id AND c.caregiver_id=?))').bind(id,user.userId,user.userId).first<any>();if(!row)return new Response('Not found',{status:404});
@@ -17,8 +18,9 @@ export async function GET(request:Request){
  const records=await env.DB!.prepare('SELECT id,name,created_at,bytes FROM checkins WHERE user_id=? ORDER BY created_at DESC LIMIT 50').bind(user.userId).all();return Response.json({records:records.results},{headers:{'Cache-Control':'private, no-store'}});
 }
 export async function POST(request:Request){
- const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in before saving a recording.'},{status:401});
+ const user=await getChatGPTUser(request);if(!user)return Response.json({error:'Please sign in before saving a recording.'},{status:401});
  const origin=request.headers.get('origin');if(origin&&origin!==new URL(request.url).origin)return new Response('Forbidden',{status:403});
+ const limited=await demoLimit(user,'video',request);if(limited)return limited;
  const form=await request.formData();const video=form.get('video');if(!(video instanceof File)||!video.size||video.size>40*1024*1024||!/^video\/(webm|mp4)/.test(video.type))return Response.json({error:'Please record a video under 40 MB.'},{status:400});
  const requested=String(form.get('id')||'');
  const id=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(requested)?requested:crypto.randomUUID();

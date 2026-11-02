@@ -1,3 +1,4 @@
+import {env} from 'cloudflare:workers';
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -23,6 +24,10 @@ export async function getChatGPTUser(): Promise<ChatGPTUser | null> {
   const userId = requestHeaders.get(USER_ID_HEADER);
   const email = requestHeaders.get(USER_EMAIL_HEADER);
   if (!userId || !email) return null;
+  // Public demo access does not expand the existing signed-in tester audience.
+  const testerEmails=(env as unknown as {SIGNED_IN_TEST_EMAILS?:string}).SIGNED_IN_TEST_EMAILS;
+  if(testerEmails){try{const allowed=JSON.parse(testerEmails);if(!Array.isArray(allowed)||!allowed.some((value:unknown)=>typeof value==='string'&&value.toLowerCase()===email.toLowerCase()))return null}catch{return null}}
+
 
   const encodedFullName = requestHeaders.get(USER_FULL_NAME_HEADER);
   const fullName =

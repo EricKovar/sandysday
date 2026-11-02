@@ -26,3 +26,7 @@ export const sparkSessions=sqliteTable('spark_sessions',{
 export const moveSessions=sqliteTable('move_sessions',{
  userId:text('user_id').primaryKey(),state:text('state').notNull(),revision:integer('revision').notNull()
 });
+
+export const demoUsage=sqliteTable('demo_usage',{
+ id:text('id').primaryKey(),count:integer('count').notNull()
+});

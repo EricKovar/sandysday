@@ -1,10 +1,10 @@
-import {getChatGPTUser} from '../../chatgpt-auth';
+import {getAppUser as getChatGPTUser} from '../../../lib/app-user';
 import {checkOrigin} from '../../../lib/server-cindy';
 import {sparkState,saveSpark} from '../../../lib/server-spark';
 import {advanceSpark,publicSpark,sparkOperations,type SparkOperation} from '../../../lib/spark';
-export async function GET(){const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in.'},{status:401});return Response.json({spark:publicSpark(await sparkState(user.userId))},{headers:{'Cache-Control':'private, no-store'}})}
+export async function GET(request?:Request){const user=await getChatGPTUser(request);if(!user)return Response.json({error:'Please sign in.'},{status:401});return Response.json({spark:publicSpark(await sparkState(user.userId))},{headers:{'Cache-Control':'private, no-store'}})}
 export async function POST(request:Request){
- const user=await getChatGPTUser();if(!user)return Response.json({error:'Please sign in.'},{status:401});if(!checkOrigin(request))return new Response('Forbidden',{status:403});
+ const user=await getChatGPTUser(request);if(!user)return Response.json({error:'Please sign in.'},{status:401});if(!checkOrigin(request))return new Response('Forbidden',{status:403});
  try{
  const b=await request.json() as any;
  if(!sparkOperations.includes(b.operation)||typeof b.requestId!=='string'||!/^[0-9a-f-]{36}$/i.test(b.requestId)||!Number.isInteger(b.revision)||String(b.text||'').length>2000)return Response.json({error:'Please try that Spark action again.'},{status:400});
