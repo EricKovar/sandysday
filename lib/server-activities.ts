@@ -1,4 +1,5 @@
-import {secret,remember} from './server-cindy';
+import {env} from 'cloudflare:workers';
+import {secret} from './server-cindy';
 import {citedActivities} from './activities';
 export async function findActivities(userId:string,location:string,interests:string,requestId:string){
  const key=secret();if(!key)throw Error('Activities search is not configured yet.');
@@ -6,6 +7,10 @@ export async function findActivities(userId:string,location:string,interests:str
  if(!r.ok)throw Error('Local activities search is unavailable right now. Please try again.');
  let result;try{result=citedActivities(await r.json())}catch{throw Error('I couldn’t find activities with reliable source links. Please try a nearby city or a different interest.')}
  const reply='Activities near '+location+'\n\n'+result.reply;
- await remember(userId,'assistant',reply,null,'Cindy',userId+':activities:'+requestId);
- return {ok:true,reply,sources:result.sources};
+ if(reply.length>20000)throw Error('The activities response was too long to save. Please try a narrower search.');
+ const id=userId+':activities:'+requestId;
+ await env.DB!.prepare("INSERT INTO conversation_messages (id,user_id,role,content,created_at,author_name) VALUES (?,?,'assistant',?,?,'Cindy') ON CONFLICT(id) DO NOTHING").bind(id,userId,reply,Date.now()).run();
+ const saved=await env.DB!.prepare('SELECT id,content,created_at FROM conversation_messages WHERE id=? AND user_id=?').bind(id,userId).first<{id:string;content:string;created_at:number}>();
+ if(!saved)throw Error('Activities could not be saved. Please try again.');
+ return {ok:true,id:saved.id,created_at:saved.created_at,reply:saved.content,sources:result.sources};
 }

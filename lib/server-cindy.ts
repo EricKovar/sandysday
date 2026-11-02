@@ -7,7 +7,10 @@ export async function savedRecords(userId:string){const result=await env.DB!.pre
 
 // Receipts come from confirmed check-in rows, not client messages or AI claims.
 export async function timeline(userId:string){
- const [chat,records]=await Promise.all([history(userId),env.DB!.prepare('SELECT id,created_at FROM checkins WHERE user_id=? ORDER BY created_at DESC LIMIT 50').bind(userId).all<{id:string;created_at:string}>()]);
+ const [recent,visible,activities,records]=await Promise.all([history(userId),
+ env.DB!.prepare("SELECT id,role,content,author_id,author_name,created_at FROM conversation_messages WHERE user_id=? AND role IN ('user','assistant') ORDER BY created_at DESC, rowid DESC LIMIT 100").bind(userId).all<{id:string;role:string;content:string;author_id:string|null;author_name:string|null;created_at:number}>(),
+ env.DB!.prepare("SELECT id,role,content,author_id,author_name,created_at FROM conversation_messages WHERE user_id=? AND role='assistant' AND id LIKE '%:activities:%' ORDER BY created_at DESC, rowid DESC LIMIT 50").bind(userId).all<{id:string;role:string;content:string;author_id:string|null;author_name:string|null;created_at:number}>(),env.DB!.prepare('SELECT id,created_at FROM checkins WHERE user_id=? ORDER BY created_at DESC LIMIT 50').bind(userId).all<{id:string;created_at:string}>()]);
  const receipts=records.results.map(r=>({id:'checkin:'+r.id,role:'checkin',kind:'checkin_saved',video_id:r.id,content:'Video check-in completed. Your video was saved to Saved videos.',author_id:null,author_name:null,created_at:Date.parse(r.created_at)}));
+ const chat=Array.from(new Map([...recent,...visible.results,...activities.results].map(message=>[message.id,message])).values());
  return [...chat,...receipts].sort((a,b)=>a.created_at-b.created_at||a.id.localeCompare(b.id));
 }

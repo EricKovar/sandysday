@@ -22,6 +22,5 @@ export function citedActivities(data:any){
  const body=parts.join('\n\n').trim();if(!body)throw Error('Search returned no summary');
  // Discard model-written links: only URL annotations are trusted as source links.
  let clean=body.replace(/\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)/g,(all,label,url)=>sources.some(s=>s.url===safeSource(url))?all:label).replace(/(?<!\()https?:\/\/[^\s)]+/g,'');
- if(clean.length>2300){clean=clean.slice(0,2300);const opening=clean.lastIndexOf('[');if(opening>clean.lastIndexOf(')'))clean=clean.slice(0,opening);clean+='…'}
  return {reply:clean+'\n\nCheck the organizer’s page for current times, cost, registration, and access details.\n\n'+sources.map((s,i)=>`[Source ${i+1}: ${s.title.replace(/[\[\]()]/g,'')}](${s.url})`).join('\n'),sources};
 }
