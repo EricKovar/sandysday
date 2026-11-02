@@ -16,3 +16,5 @@
 .conversation.sparkActive{height:auto;overflow:visible}.sparkActive .chatBody{flex:none;overflow:visible}.sparkActive .welcome{display:none}.sparkActive .messages{max-height:150px;overflow:auto}
 
 .chatText{white-space:pre-wrap;overflow-wrap:anywhere}.chatText a{color:#315d50;text-decoration:underline;text-underline-offset:3px;font-weight:600}.message.you .chatText a{color:white}.careChatBubble.mine .chatText a{color:inherit}
+
+.sparkReceipt .receiptHeading strong{display:inline-flex;align-items:center;gap:6px}
