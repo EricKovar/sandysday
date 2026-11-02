@@ -1,3 +1,4 @@
+import {moveState} from '../../../lib/server-move';
 import {sparkView} from '../../../lib/server-spark';
 import {sharingStatus} from '../../../lib/care-server';
 import {getChatGPTUser} from '../../chatgpt-auth';
@@ -9,6 +10,7 @@ export async function POST(request:Request){
  const context=await history(user.userId);const records=await savedRecords(user.userId);
  const session=realtimeSession(String(b.name||'Susan').slice(0,40),context,records,b.stage,b.deferred,await sharingStatus(user.userId));
  session.instructions+='\nServer-confirmed Daily Spark: '+JSON.stringify(await sparkView(user.userId));
+ session.instructions+='\nServer-confirmed Daily Move: '+JSON.stringify(await moveState(user.userId));
  const form=new FormData();form.set('sdp',b.sdp);form.set('session',JSON.stringify(session));
  try{const r=await fetch('https://api.openai.com/v1/realtime/calls',{method:'POST',headers:{Authorization:'Bearer '+key},body:form,signal:AbortSignal.timeout(25000)});if(!r.ok){const e=await r.json().catch(()=>({})) as any;console.warn('Realtime setup failed',r.status,e.error?.code);return Response.json({error:r.status===429?'Voice reached its API limit. You can try again shortly.':'Voice could not connect. You can still type to Cindy.'},{status:503})}return new Response(await r.text(),{headers:{'Content-Type':'application/sdp','Cache-Control':'no-store'}})}catch{return Response.json({error:'Voice connection interrupted. You can still type to Cindy.'},{status:503})}
 }

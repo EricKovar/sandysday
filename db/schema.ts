@@ -22,3 +22,7 @@ export const caregiverPrivateMessages=sqliteTable('caregiver_private_messages',{
 export const sparkSessions=sqliteTable('spark_sessions',{
  userId:text('user_id').primaryKey(),state:text('state').notNull(),revision:integer('revision').notNull(),updatedAt:integer('updated_at').notNull()
 });
+
+export const moveSessions=sqliteTable('move_sessions',{
+ userId:text('user_id').primaryKey(),state:text('state').notNull(),revision:integer('revision').notNull()
+});

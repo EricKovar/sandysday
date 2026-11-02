@@ -1,0 +1,14 @@
+export const MOVE_VIDEO_ID='Znm51BKoBfs';
+export const MOVE_VIDEO_URL='https://www.youtube.com/watch?v='+MOVE_VIDEO_ID;
+export const moveOperations=['open','finish','confirm','stop'] as const;
+export type MoveOperation=typeof moveOperations[number];
+export type MoveState={id:string;status:'active'|'awaiting_confirmation'|'completed'|'stopped';revision:number;lastRequest:string;completedAt?:number};
+export type MoveController={control:(operation:'play'|'pause'|'restart')=>Promise<{ok:boolean;reason?:string}>};
+export type MovePlayback='loading'|'ready'|'playing'|'paused'|'ended'|'error';
+export function advanceMove(old:MoveState|null,operation:MoveOperation,requestId:string):MoveState{
+ if(operation==='open')return {id:old&&['active','awaiting_confirmation'].includes(old.status)?old.id:crypto.randomUUID(),status:'active',revision:old?.revision||0,lastRequest:requestId};
+ if(!old||!['active','awaiting_confirmation'].includes(old.status))throw Error('Open Daily Move first.');
+ if(operation==='confirm'&&old.status!=='awaiting_confirmation')throw Error('Tell Cindy you are finished before confirming completion.');
+ return {...old,status:operation==='confirm'?'completed':operation==='finish'?'awaiting_confirmation':'stopped',lastRequest:requestId,...(operation==='confirm'?{completedAt:Date.now()}:{})};
+}
+export const moveGuidance=`Daily Move now offers the Senior Member's selected YouTube chair yoga video inside this conversation. Use open_move for requests for chair yoga, movement, stretching, or Daily Move. It opens a preview; do not claim playback until the player reports it. Use move_play, move_pause, move_restart, or move_stop for explicit playback requests. Use move_finish when they say they are finished; this pauses the video and asks 'Would you like me to mark your chair yoga as completed?' Only use move_confirm after their explicit affirmative response to that confirmation question. Ending the video, opening it, pausing, stopping, or watching it is NOT completion. Completion is a self-report, not verified exercise or a health assessment. Do not invent the video's instructor, duration, movements, or safety/suitability claims; you cannot see or evaluate their movement. Follow the video's instructor; avoid personalized exercise prescriptions. During playback Cindy stays quiet and only handles spoken controls addressed to 'Cindy' (for example 'Cindy, pause'); the app resumes normal conversation when paused. Do not infer commands from the instructor audio. If the browser blocks playback, ask them to tap Play in the video. If embedding is unavailable, the exact YouTube link is provided; never claim it played. Camera/recording takes priority and closes Move without marking it complete. Do not pressure them to finish. A stopped session is not completed. The completed video player must close and leave a chronological shared-chat receipt. Never claim a caregiver was notified.`;

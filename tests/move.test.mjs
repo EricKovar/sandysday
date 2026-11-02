@@ -1,0 +1,17 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {randomUUID} from 'node:crypto';import {fixture} from './fixture.mjs';
+const read=async f=>(await (await f.conversation.GET()).json()).move;
+async function act(f,operation,extra={}){const state=await read(f);const r=await f.move.POST(new Request('https://preview.invalid/api/move',{method:'POST',headers:{Origin:'https://preview.invalid','Content-Type':'application/json'},body:JSON.stringify({operation,revision:state?.revision||0,requestId:randomUUID(),...extra})}));return {status:r.status,...await r.json()}}
+const count=f=>f.db.prepare("SELECT count(*) AS n FROM conversation_messages WHERE id LIKE 'move-completed:%'").get().n;
+test('Move opens selected video session; playback ending/finish cannot mark completion without a separate confirmation',async()=>{
+ const f=fixture();await act(f,'open');assert.equal((await read(f)).status,'active');assert.equal(count(f),0);assert.equal((await act(f,'confirm')).status,400);await act(f,'finish');assert.equal((await read(f)).status,'awaiting_confirmation');assert.equal(count(f),0);const prior=await read(f),id=randomUUID();const done=await act(f,'confirm',{requestId:id});assert.equal(done.move.status,'completed');assert.equal(count(f),1);const replay=await act(f,'confirm',{requestId:id,revision:prior.revision});assert.deepEqual(replay.move,done.move);assert.equal(count(f),1);assert.equal((await read(f)).status,'completed');
+});
+test('Move stop and not-yet never create a completed receipt; later sessions receive distinct receipts',async()=>{
+ const f=fixture();await act(f,'open');await act(f,'finish');await act(f,'open');assert.equal((await read(f)).status,'active');await act(f,'stop');assert.equal(count(f),0);for(let i=0;i<2;i++){await act(f,'open');await act(f,'finish');await act(f,'confirm')}assert.equal(count(f),2);
+});
+test('Move rejects stale commands, unauthorized writes, and foreign origins',async()=>{
+ const f=fixture();const first=await act(f,'open');await act(f,'finish');assert.equal((await act(f,'stop',{revision:first.move.revision})).status,409);const r=await f.move.POST(new Request('https://preview.invalid/api/move',{method:'POST',headers:{Origin:'https://elsewhere.invalid'},body:'{}'}));assert.equal(r.status,403);f.as(null);assert.equal((await f.move.POST(new Request('https://preview.invalid/api/move',{method:'POST',body:'{}'}))).status,401);
+});
+test('Move completion stays chronological in the shared chat and out of Caregiver private chat',async()=>{
+ const f=fixture();await act(f,'open');await act(f,'finish');await act(f,'confirm');const state=await read(f);const messages=(await (await f.conversation.GET()).json()).messages;const receipt=messages.find(m=>m.id==='move-completed:'+state.id);assert.equal(receipt.created_at,state.completedAt);assert.ok(receipt.content.includes('confirmed by the Senior Member'));
+ f.db.prepare('INSERT INTO care_connections (id,senior_id,caregiver_id,senior_name,caregiver_name,created_at) VALUES (?,?,?,?,?,?)').run(randomUUID(),'test-a','cg','Senior A','Caregiver',Date.now());f.as({userId:'cg',email:'cg@example.invalid',fullName:'Caregiver'});const shared=await (await f.chat.GET(new Request('https://preview.invalid/api/cindy-chat?senior=test-a&scope=shared'))).json();assert.ok(shared.messages.some(m=>m.id===receipt.id));const privateChat=await (await f.chat.GET(new Request('https://preview.invalid/api/cindy-chat?senior=test-a&scope=private'))).json();assert.equal(privateChat.messages.length,0);assert.equal(await read(f),null);
+});
