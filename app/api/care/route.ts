@@ -1,11 +1,12 @@
+import {getAppUser} from '../../../lib/app-user';
 import {env} from 'cloudflare:workers';
 import {getChatGPTUser} from '../../chatgpt-auth';
 import {checkOrigin} from '../../../lib/server-cindy';
 import {hashToken} from '../../../lib/care-server';
 const json=(body:unknown,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'private, no-store'}});
 const clean=(value:unknown,max=60)=>String(value||'').trim().slice(0,max);
-export async function GET(){
- const user=await getChatGPTUser();if(!user)return json({error:'Please sign in to see your Care Circle.'},401);
+export async function GET(request?:Request){
+ const user=await getAppUser(request);if(!user)return json({error:'Please sign in to see your Care Circle.'},401);
  const profile=await env.DB!.prepare('SELECT name,role FROM care_profiles WHERE user_id=?').bind(user.userId).first();
  const connections=await env.DB!.prepare('SELECT id,senior_id,caregiver_id,senior_name,caregiver_name,created_at FROM care_connections WHERE senior_id=? OR caregiver_id=? ORDER BY created_at DESC').bind(user.userId,user.userId).all();
  const invitations=await env.DB!.prepare("SELECT id,creator_id,creator_name,creator_role,target_name,target_email,status,expires_at,created_at FROM care_invitations WHERE (creator_id=? OR target_email=?) AND status='pending' AND expires_at>? ORDER BY created_at DESC").bind(user.userId,user.email.toLowerCase(),Date.now()).all();

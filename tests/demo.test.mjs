@@ -14,7 +14,7 @@ test('anonymous demo browsers cannot read each other’s chats or recordings, or
  const f=fixture();const realId=randomUUID();assert.equal((await f.route.POST(request(realId))).status,200);f.as(null);const a=await guest(f),b=await guest(f);const videoId=randomUUID();assert.equal((await upload(f,a,videoId)).status,200);assert.equal((await f.route.GET(req('/api/checkins?video='+videoId,a))).status,200);assert.equal((await f.route.GET(req('/api/checkins?video='+videoId,b))).status,404);assert.equal((await f.route.GET(req('/api/checkins?video='+realId,a))).status,404);
  await f.events.POST(req('/api/events',a,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({role:'user',content:'Guest A private demo message',id:randomUUID()})}));
  const chatA=await (await f.conversation.GET(req('/api/conversation',a))).json(),chatB=await (await f.conversation.GET(req('/api/conversation',b))).json();assert.ok(chatA.messages.some(m=>m.content.includes('Guest A')));assert.equal(chatB.messages.length,0);assert.notEqual(chatA.user_id,chatB.user_id);assert.equal((await f.route.GET(new Request('https://preview.invalid/api/checkins'))).status,401);
- assert.equal((await f.care.GET()).status,401);assert.equal((await f.chat.GET(req('/api/cindy-chat?scope=private&senior=test-a',a))).status,401);
+ assert.equal((await f.care.GET()).status,401);assert.equal((await f.chat.GET(req('/api/cindy-chat?scope=private&senior=test-a',a))).status,403);
 });
 test('demo resource limits survive starting a fresh browser session on the same network',async()=>{
  let calls=0;const f=fixture({fetch:async()=>{calls++;return new Response('Synthetic unavailable provider',{status:503})}});f.as(null);
