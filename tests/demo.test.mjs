@@ -16,12 +16,16 @@ test('anonymous demo browsers cannot read each other’s chats or recordings, or
  const chatA=await (await f.conversation.GET(req('/api/conversation',a))).json(),chatB=await (await f.conversation.GET(req('/api/conversation',b))).json();assert.ok(chatA.messages.some(m=>m.content.includes('Guest A')));assert.equal(chatB.messages.length,0);assert.notEqual(chatA.user_id,chatB.user_id);assert.equal((await f.route.GET(new Request('https://preview.invalid/api/checkins'))).status,401);
  assert.equal((await f.care.GET()).status,401);assert.equal((await f.chat.GET(req('/api/cindy-chat?scope=private&senior=test-a',a))).status,403);
 });
-test('demo resource limits survive starting a fresh browser session on the same network',async()=>{
- let calls=0;const f=fixture({fetch:async()=>{calls++;return new Response('Synthetic unavailable provider',{status:503})}});f.as(null);
- for(let i=0;i<5;i++){const cookie=await guest(f);const r=await f.activities.POST(req('/api/activities',cookie,{method:'POST',headers:{'cf-connecting-ip':'192.0.2.1','Content-Type':'application/json'},body:JSON.stringify({location:'Menlo Park, CA',interests:'library',requestId:randomUUID()})}));assert.notEqual(r.status,401)}
- // Four Realtime connections are allowed per network/day, across fresh cookies.
- for(let i=0;i<5;i++){const cookie=await guest(f);const r=await f.realtime.POST(req('/api/realtime',cookie,{method:'POST',headers:{'cf-connecting-ip':'192.0.2.1','Content-Type':'application/json'},body:JSON.stringify({sdp:'synthetic-offer',name:'Susan',stage:'idle'})}));assert.equal(r.status,i<4?503:429)}
- assert.equal(calls,9);
+test('voice supports repeated role-switch reconnects and keeps a bounded per-network limit',async()=>{
+ let calls=0;const f=fixture({fetch:async()=>{calls++;return new Response('synthetic-sdp-answer')}});f.as(null);
+ for(let i=0;i<21;i++){const cookie=await guest(f);const r=await f.realtime.POST(req('/api/realtime',cookie,{method:'POST',headers:{'cf-connecting-ip':'192.0.2.1','Content-Type':'application/json'},body:JSON.stringify({sdp:'synthetic-offer',name:'Susan',stage:'idle'})}));assert.equal(r.status,i<20?200:429)}
+ assert.equal(calls,20);
+});
+test('failed provider voice starts do not consume the demo voice allowance',async()=>{
+ let succeed=false;const f=fixture({fetch:async()=>succeed?new Response('synthetic-sdp-answer'):new Response('{}',{status:503})});f.as(null);const cookie=await guest(f);
+ for(let i=0;i<24;i++){const r=await f.realtime.POST(req('/api/realtime',cookie,{method:'POST',headers:{'cf-connecting-ip':'192.0.2.2','Content-Type':'application/json'},body:JSON.stringify({sdp:'synthetic-offer',stage:'idle'})}));assert.equal(r.status,503)}
+ assert.ok(f.db.prepare("SELECT count FROM demo_usage WHERE id LIKE '%:voice'").all().every(row=>row.count===0));
+ succeed=true;const r=await f.realtime.POST(req('/api/realtime',cookie,{method:'POST',headers:{'cf-connecting-ip':'192.0.2.2','Content-Type':'application/json'},body:JSON.stringify({sdp:'synthetic-offer',stage:'idle'})}));assert.equal(r.status,200);
 });
 test('public guest access does not grant unlisted signed-in accounts access to tester APIs',async()=>{
  const f=fixture({realAuth:true,env:{SIGNED_IN_TEST_EMAILS:JSON.stringify(['tester@example.invalid'])}});
