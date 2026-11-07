@@ -9,7 +9,7 @@ export async function findActivities(userId:string,location:string,interests:str
  const reply='Activities near '+location+'\n\n'+result.reply;
  if(reply.length>20000)throw Error('The activities response was too long to save. Please try a narrower search.');
  const id=userId+':activities:'+requestId;
- await env.DB!.prepare("INSERT INTO conversation_messages (id,user_id,role,content,created_at,author_name) VALUES (?,?,'assistant',?,?,'Cindy') ON CONFLICT(id) DO NOTHING").bind(id,userId,reply,Date.now()).run();
+ await env.DB!.prepare("INSERT INTO conversation_messages (id,user_id,role,content,created_at,author_name) VALUES (?,?,'assistant',?,?,'Sandy') ON CONFLICT(id) DO NOTHING").bind(id,userId,reply,Date.now()).run();
  const saved=await env.DB!.prepare('SELECT id,content,created_at FROM conversation_messages WHERE id=? AND user_id=?').bind(id,userId).first<{id:string;content:string;created_at:number}>();
  if(!saved)throw Error('Activities could not be saved. Please try again.');
  return {ok:true,id:saved.id,created_at:saved.created_at,reply:saved.content,sources:result.sources};

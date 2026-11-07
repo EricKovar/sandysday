@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
-*{box-sizing:border-box}body{margin:0;background:#f8f6f1;color:#172b2a;font-family:'DM Sans',Arial,sans-serif}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b8804d;outline-offset:4px}header{height:106px;border-bottom:1px solid #e4e5dc;display:flex;align-items:center;justify-content:space-between;padding:0 5%}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:#193e37;font-family:Manrope,Arial;font-size:25px;font-weight:800;letter-spacing:-1px}.brand small{display:block;font-size:9px;letter-spacing:2px;margin-top:5px;font-weight:600}.brandmark{width:47px;height:47px;display:grid;place-items:center;border-radius:50%;background:#e9eddf;color:#657a4b}.headerRight{display:flex;align-items:center;gap:25px}.previewBadge{font-size:10px;letter-spacing:1.5px;background:#e8eade;color:#61724e;padding:9px 12px;border-radius:5px}.textButton{border:0;background:none;display:flex;gap:8px;align-items:center;color:#315c50;font-size:14px}.layout{max-width:1390px;margin:auto;display:grid;grid-template-columns:360px minmax(0,1fr);gap:85px;padding:48px 5% 40px}aside{padding-top:15px}.date{font-size:10px;letter-spacing:1.7px;display:flex;align-items:center;gap:10px;color:#6a7d59}h1{font:500 51px/1.15 Manrope,Arial;letter-spacing:-2px;margin:25px 0 20px}.intro{font-size:18px;line-height:1.8;color:#7b8176}.dayCard{margin-top:32px;padding:25px 24px;background:#f0f0e8;border:1px solid #e6e7dc;border-radius:15px}.eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:700;color:#7a826e}.task{display:flex;gap:14px;align-items:center;margin-top:24px}.taskIcon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#e3e8d7;color:#657d46}.task strong{font-size:14px;font-weight:500}.task small{display:block;font-size:12px;color:#858d7c;margin-top:6px}.muted{opacity:.55}.complete{background:#d5e5d8;color:#2f704c}.careNote{display:flex;gap:12px;align-items:center;color:#71826c;margin:25px 4px}.careNote p{font-size:13px;line-height:1.7}.nameLabel{font-size:11px;color:#7a8276;display:flex;align-items:center;gap:10px}.nameLabel input{width:130px;background:transparent;border:0;border-bottom:1px solid #ccd1c2;padding:7px;color:#365547}.previewNote{font-size:11px;line-height:1.6;color:#8d9288;max-width:280px}.conversation{background:#fffefa;border:1px solid #e3e7dc;border-radius:23px;box-shadow:0 12px 45px #243f2b06;display:flex;flex-direction:column;height:730px;min-height:570px;overflow:hidden}.chatHeader{display:flex;align-items:center;gap:14px;padding:22px 28px;border-bottom:1px solid #ebeee5}.avatar{width:49px;height:49px;display:grid;place-items:center;background:#e6ecdb;border-radius:50%;font:500 25px Georgia;color:#5a734b;border:4px solid #f2f4eb}.chatHeader h2{margin:0 0 6px;font-size:17px;font-weight:600}.chatHeader span{font-size:11px;color:#859079}.chatHeader i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#8b9f6d;margin-right:6px}.iconButton{margin-left:auto;border:1px solid #e8ebdf;border-radius:50%;width:39px;height:39px;background:none;color:#758269;display:grid;place-items:center}.iconButton svg{width:18px}.chatBody{flex:1;overflow:auto;padding:22px 30px}.welcome{text-align:center;padding:3px 0 28px}.sunIllustration{display:inline-grid;place-items:center;width:65px;height:65px;border-radius:50%;color:#ba9b60;background:#faf4e5}.welcome p{font-size:11px;color:#a0a28f;margin:14px 0}.messages{display:flex;flex-direction:column;gap:18px}.message{max-width:89%;font-size:23px;line-height:1.5;letter-spacing:-.4px}.messageName{font-size:10px;letter-spacing:.3px;color:#829174;display:block;margin:0 0 7px 2px}.message p{margin:0}.cindy{align-self:flex-start;background:#eff2e8;border-radius:3px 17px 17px 17px;padding:18px 23px}.you{align-self:flex-end;background:#315d50;color:white;padding:13px 22px;border-radius:17px 3px 17px 17px;font-size:19px}.composer{padding:18px 27px 20px;border-top:1px solid #edf0e6}.voiceHint{font-size:11px;color:#8b9282;margin:0 0 13px 4px}.voiceHint span{display:inline-block;width:5px;height:5px;border-radius:50%;background:#8da077;margin-right:6px}.composer form{display:flex;align-items:center;gap:9px;border:1px solid #e2e7d9;padding:8px;border-radius:14px;background:#fff}.composer input{min-width:0;flex:1;border:0;background:none;padding:10px;font-size:17px;color:#2a4337;outline:none}.composer input::placeholder{color:#a5aa9a}.mic,.send{width:45px;height:45px;border-radius:10px;border:0;display:grid;place-items:center}.mic{background:#eef1e6;color:#5d774e}.mic.active{background:#eec8b6;color:#8f392c}.send{background:#315d50;color:white}.composer>p{display:flex;justify-content:center;align-items:center;gap:5px;margin:12px 0 0;font-size:10px;color:#a0a797}.activity{margin:22px 0 5px;border:1px solid #dce2d2;border-radius:14px;overflow:hidden;background:#f8faf4}.activityTitle{display:flex;align-items:center;gap:10px;padding:15px;font-size:13px}.activityTitle button{margin-left:auto;background:none;border:0;color:#6c7e65}.activity video{display:block;width:100%;height:auto;max-width:560px;max-height:460px;max-height:min(460px,60svh);margin:0 auto;object-fit:contain;background:#223c30}.activityStatus{padding:14px;display:flex;gap:10px;align-items:center;font-size:14px}.activityActions{padding:0 14px 14px}.activityActions:empty{display:none}.activityActions button{display:flex;gap:8px;align-items:center;background:#315d50;color:white;border:0;padding:14px 22px;border-radius:10px;font-size:17px}.recordDot{width:9px;height:9px;background:#b83f34;border-radius:50%}.error{padding:16px;background:#fff0e5;color:#8a4b27;border-radius:10px;font-size:14px;margin-top:15px}.error a{display:block;color:inherit;margin-top:9px}.history{overflow:auto;padding:30px}.history h2{font-size:26px}.history p{font-size:14px;line-height:1.7;color:#74816c}.history article{display:flex;gap:15px;padding:20px 0;border-top:1px solid #e5e9de}.history article video{width:100%;max-height:230px;border-radius:10px}.empty{padding:40px 5px;text-align:center}.empty a{color:#315d50;font-size:14px}footer{border-top:1px solid #e4e6dc;margin:0 5%;padding:22px 0;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.5px;color:#939a8c}footer span:first-child{font-weight:700;color:#687d60}@media(min-width:1450px){.layout{padding-top:65px}}@media(max-width:1050px){.layout{gap:35px;grid-template-columns:280px 1fr}h1{font-size:43px}.message{font-size:21px}}@media(max-width:760px){header{height:80px;padding:0 20px}.brand{font-size:20px}.brandmark{width:37px;height:37px}.previewBadge{display:none}.headerRight{gap:0}.textButton{font-size:11px}.layout{display:block;padding:18px 12px}.layout aside{display:none}.conversation{height:calc(100dvh - 120px);min-height:500px;border-radius:18px}.chatHeader{padding:17px 20px}.chatBody{padding:22px 18px}.message{font-size:22px;max-width:94%}.composer{padding:15px}.composer input{font-size:16px}.composer>p{font-size:9px}.welcome{padding-bottom:22px}footer{display:none}}
+*{box-sizing:border-box}body{margin:0;background:#f8f6f1;color:#172b2a;font-family:'DM Sans',Arial,sans-serif}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b8804d;outline-offset:4px}header{height:106px;border-bottom:1px solid #e4e5dc;display:flex;align-items:center;justify-content:space-between;padding:0 5%}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:#18184b;font-family:Manrope,Arial;font-size:25px;font-weight:800;letter-spacing:-1px}.brand small{display:block;font-size:9px;letter-spacing:2px;margin-top:5px;font-weight:600}.brandmark{width:47px;height:47px;display:grid;place-items:center;border-radius:50%;background:#e9eddf;color:#657a4b}.headerRight{display:flex;align-items:center;gap:25px}.previewBadge{font-size:10px;letter-spacing:1.5px;background:#e8eade;color:#61724e;padding:9px 12px;border-radius:5px}.textButton{border:0;background:none;display:flex;gap:8px;align-items:center;color:#315c50;font-size:14px}.layout{max-width:1390px;margin:auto;display:grid;grid-template-columns:360px minmax(0,1fr);gap:85px;padding:48px 5% 40px}aside{padding-top:15px}.date{font-size:10px;letter-spacing:1.7px;display:flex;align-items:center;gap:10px;color:#6a7d59}h1{font:500 51px/1.15 Manrope,Arial;letter-spacing:-2px;margin:25px 0 20px}.intro{font-size:18px;line-height:1.8;color:#7b8176}.dayCard{margin-top:32px;padding:25px 24px;background:#f0f0e8;border:1px solid #e6e7dc;border-radius:15px}.eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:700;color:#7a826e}.task{display:flex;gap:14px;align-items:center;margin-top:24px}.taskIcon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#e3e8d7;color:#657d46}.task strong{font-size:14px;font-weight:500}.task small{display:block;font-size:12px;color:#858d7c;margin-top:6px}.muted{opacity:.55}.complete{background:#d5e5d8;color:#2f704c}.careNote{display:flex;gap:12px;align-items:center;color:#71826c;margin:25px 4px}.careNote p{font-size:13px;line-height:1.7}.nameLabel{font-size:11px;color:#7a8276;display:flex;align-items:center;gap:10px}.nameLabel input{width:130px;background:transparent;border:0;border-bottom:1px solid #ccd1c2;padding:7px;color:#365547}.previewNote{font-size:11px;line-height:1.6;color:#8d9288;max-width:280px}.conversation{background:#fffefa;border:1px solid #e3e7dc;border-radius:23px;box-shadow:0 12px 45px #243f2b06;display:flex;flex-direction:column;height:730px;min-height:570px;overflow:hidden}.chatHeader{display:flex;align-items:center;gap:14px;padding:22px 28px;border-bottom:1px solid #ebeee5}.avatar{width:49px;height:49px;display:grid;place-items:center;background:#e6ecdb;border-radius:50%;font:500 25px Georgia;color:#5a734b;border:4px solid #f2f4eb}.chatHeader h2{margin:0 0 6px;font-size:17px;font-weight:600}.chatHeader span{font-size:11px;color:#859079}.chatHeader i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#8b9f6d;margin-right:6px}.iconButton{margin-left:auto;border:1px solid #e8ebdf;border-radius:50%;width:39px;height:39px;background:none;color:#758269;display:grid;place-items:center}.iconButton svg{width:18px}.chatBody{flex:1;overflow:auto;padding:22px 30px}.welcome{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,20px);padding:3px 0 28px}.sunIllustration{display:inline-grid;place-items:center;width:65px;height:65px;border-radius:50%;color:#ba9b60;background:#faf4e5}.welcome p{font-size:33px;line-height:1.3;color:#18184b;margin:14px 0;overflow-wrap:break-word}.messages{display:flex;flex-direction:column;gap:18px}.message{max-width:89%;font-size:23px;line-height:1.5;letter-spacing:-.4px}.messageName{font-size:10px;letter-spacing:.3px;color:#829174;display:block;margin:0 0 7px 2px}.message p{margin:0}.cindy{align-self:flex-start;background:#eff2e8;border-radius:3px 17px 17px 17px;padding:18px 23px}.you{align-self:flex-end;background:#315d50;color:white;padding:13px 22px;border-radius:17px 3px 17px 17px;font-size:19px}.composer{padding:18px 27px 20px;border-top:1px solid #edf0e6}.voiceHint{font-size:11px;color:#8b9282;margin:0 0 13px 4px}.voiceHint span{display:inline-block;width:5px;height:5px;border-radius:50%;background:#8da077;margin-right:6px}.composer form{display:flex;align-items:center;gap:9px;border:1px solid #e2e7d9;padding:8px;border-radius:14px;background:#fff}.composer input{min-width:0;flex:1;border:0;background:none;padding:10px;font-size:17px;color:#2a4337;outline:none}.composer input::placeholder{color:#a5aa9a}.mic,.send{width:45px;height:45px;border-radius:10px;border:0;display:grid;place-items:center}.mic{background:#eef1e6;color:#5d774e}.mic.active{background:#eec8b6;color:#8f392c}.send{background:#315d50;color:white}.composer>p{display:flex;justify-content:center;align-items:center;gap:5px;margin:12px 0 0;font-size:10px;color:#a0a797}.activity{margin:22px 0 5px;border:1px solid #dce2d2;border-radius:14px;overflow:hidden;background:#f8faf4}.activityTitle{display:flex;align-items:center;gap:10px;padding:15px;font-size:13px}.activityTitle button{margin-left:auto;background:none;border:0;color:#6c7e65}.activity video{display:block;width:100%;height:auto;max-width:560px;max-height:460px;max-height:min(460px,60svh);margin:0 auto;object-fit:contain;background:#223c30}.activityStatus{padding:14px;display:flex;gap:10px;align-items:center;font-size:14px}.activityActions{padding:0 14px 14px}.activityActions:empty{display:none}.activityActions button{display:flex;gap:8px;align-items:center;background:#315d50;color:white;border:0;padding:14px 22px;border-radius:10px;font-size:17px}.recordDot{width:9px;height:9px;background:#b83f34;border-radius:50%}.error{padding:16px;background:#fff0e5;color:#8a4b27;border-radius:10px;font-size:14px;margin-top:15px}.error a{display:block;color:inherit;margin-top:9px}.history{overflow:auto;padding:30px}.history h2{font-size:26px}.history p{font-size:14px;line-height:1.7;color:#74816c}.history article{display:flex;gap:15px;padding:20px 0;border-top:1px solid #e5e9de}.history article video{width:100%;max-height:230px;border-radius:10px}.empty{padding:40px 5px;text-align:center}.empty a{color:#315d50;font-size:14px}footer{border-top:1px solid #e4e6dc;margin:0 5%;padding:22px 0;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.5px;color:#939a8c}footer span:first-child{font-weight:700;color:#687d60}@media(min-width:1450px){.layout{padding-top:65px}}@media(max-width:1050px){.layout{gap:35px;grid-template-columns:280px 1fr}h1{font-size:43px}.message{font-size:21px}}@media(max-width:760px){header{height:80px;padding:0 20px}.brand{font-size:20px}.brandmark{width:37px;height:37px}.previewBadge{display:none}.headerRight{gap:0}.textButton{font-size:11px}.layout{display:block;padding:18px 12px}.layout aside{display:none}.conversation{height:calc(100dvh - 120px);min-height:500px;border-radius:18px}.chatHeader{padding:17px 20px}.chatBody{padding:22px 18px}.message{font-size:22px;max-width:94%}.composer{padding:15px}.composer input{font-size:16px}.composer>p{font-size:9px}.welcome{padding-bottom:22px}footer{display:none}}
 .endVoice{border:1px solid #d5dfcd;background:#eff3e8;color:#315d50;border-radius:8px;padding:8px 12px;font-size:12px;float:right;margin-top:-6px}.mic.active{background:#315d50;color:white;box-shadow:0 0 0 4px #e5eddf}.conversation{height:760px}.composer>p{line-height:1.5;text-align:center}.error a{font-weight:600}@media(max-width:760px){.conversation{height:calc(100dvh - 120px)}.endVoice{float:none;margin:0 0 12px}}
 .videoNav{display:flex;gap:8px;padding:12px 24px;border-bottom:1px solid #e4e9dc;background:#fafbf6;flex-shrink:0}.videoNav button{min-height:45px;display:flex;align-items:center;gap:9px;padding:10px 15px;background:white;border:1px solid #dbe3d2;border-radius:10px;color:#315d50;font-size:15px}.videoNav button.selected{background:#315d50;border-color:#315d50;color:white}.videoNav button span{min-width:23px;padding:2px 6px;border-radius:12px;background:#e4ecd9;color:#315d50;font-size:12px}.savedPlayback{padding:0 16px 16px}.savedPlayback p{font-size:13px;color:#62785b}.savedPlayback video{width:100%;max-height:280px;border-radius:9px;background:#172b2a;object-fit:contain}.savedPlayback button{display:flex;align-items:center;gap:9px;margin-top:14px;min-height:44px;padding:10px 15px;border:1px solid #aabda0;border-radius:9px;background:white;color:#315d50}.history{flex:1}.history article>div{min-width:0;width:100%}.headerRight .textButton{border:1px solid #b7c7ad;border-radius:9px;padding:11px 14px;font-weight:600;background:#edf2e5}.history .error button{display:block;margin-top:12px;padding:10px 18px;border-radius:8px;border:1px solid #cba382;background:white;color:inherit}@media(max-width:760px){.videoNav{padding:10px 15px;gap:7px}.videoNav button{padding:10px 12px;font-size:14px;flex:1;justify-content:center}.headerRight .textButton{padding:9px 10px;font-size:12px}.history{padding:24px 18px}.conversation{min-height:540px}}
 .carePage{min-height:100vh}.careBack{display:flex;align-items:center;gap:8px;color:#315d50;text-decoration:none;font-size:14px}.careContainer{max-width:1060px;margin:48px auto;padding:0 24px 60px}.careHeading{display:flex;gap:24px;align-items:flex-start;margin-bottom:26px}.careHeading h1{font-size:38px;margin:13px 0;letter-spacing:-1px}.careHeading p{line-height:1.7;color:#75816c;margin:0}.careIcon{background:#e7eddd;color:#63814e;border-radius:18px;width:60px;height:60px;display:grid;place-items:center;flex-shrink:0}.careTabs{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.careTabs a{display:flex;gap:9px;align-items:center;border:1px solid #d7e1cb;border-radius:10px;background:#fffefa;padding:13px 18px;text-decoration:none;color:#315d50;font-size:14px}.careAccount{font-size:12px;color:#7e8876;margin:20px 0}.careCard{padding:28px;background:#fffefa;border:1px solid #e0e6d7;border-radius:18px;margin:20px 0}.careCard h2{font-size:21px;font-weight:600;margin:5px 0 15px;letter-spacing:-.5px}.careCard p{font-size:15px;line-height:1.7;color:#6f7e66}.cardTitle{display:flex;gap:12px;align-items:center;color:#486d3b;margin-bottom:16px}.cardTitle h2{margin:0;color:#203e32}.careCard label{display:block;color:#40563a;font-size:14px;line-height:1.6;margin:18px 0}.careCard input:not([type=checkbox]):not([type=radio]){display:block;width:100%;max-width:540px;border:1px solid #cbd8bf;background:white;border-radius:9px;font-size:17px;padding:13px 14px;margin-top:7px;min-height:48px;color:#274d3b}.careCard small{display:block;color:#839078;font-size:12px;margin-top:7px;line-height:1.6}.careCard .consent{display:flex;align-items:flex-start;gap:12px;max-width:650px;margin:24px 0}.consent input{width:22px;height:22px;flex-shrink:0;accent-color:#315d50}.careCard fieldset{border:1px solid #dce4d4;padding:12px 18px;border-radius:10px;max-width:540px;margin:22px 0}.careCard legend{font-size:13px;color:#6a7b5f;padding:0 6px}.careCard .roleOption{display:inline-flex;align-items:center;gap:8px;margin:8px 24px 8px 0}.roleOption input{width:19px;height:19px;accent-color:#315d50}.primary,.secondary,.danger{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 18px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:500;margin-right:9px;border:1px solid #cbd8bf}.primary{background:#315d50;color:white;border-color:#315d50}.secondary{background:white;color:#315d50}.danger{background:#914d3a;color:white;border-color:#914d3a}.privateNote{font-size:12px!important;line-height:1.8!important;color:#85907c!important;max-width:760px}.sharingTerms{padding:20px;background:#eff3e7;border:1px solid #dce6cf;border-radius:12px;font-size:16px;line-height:1.7;color:#3d5e32}.sharingTerms strong{display:block;font-size:13px;font-weight:500;margin-top:9px}.careError{padding:18px;background:#fbede4;border-radius:10px;color:#8c4a30!important;line-height:1.7;font-size:14px}.careError a{display:block;color:inherit;font-weight:600;margin-top:12px}.careNotice{padding:15px 20px;background:#e7efdc;color:#3b632e;border-radius:10px;font-size:14px}.connectionRow{display:flex;gap:15px;align-items:center;flex-wrap:wrap;padding:21px 0;border-top:1px solid #e2e8db}.connectionRow>div:not(.disconnectConfirm){flex:1}.connectionRow p{margin:6px 0 0;font-size:13px}.connectionAvatar{width:43px;height:43px;background:#e4ecd9;border-radius:50%;display:grid;place-items:center;color:#5f7c48}.disconnectConfirm{flex-basis:100%;background:#faf0e8;padding:18px;border-radius:10px}.pendingInvite{display:flex;gap:18px;align-items:center;justify-content:space-between;border-top:1px solid #e2e8db;padding:18px 0}.pendingInvite p{margin:5px 0;font-size:13px}.inviteLink{margin-top:24px;padding:20px;background:#eff3e7;border-radius:12px;overflow-wrap:anywhere}.inviteLink input{font-size:12px!important}.dashboardToolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:32px 0 18px}.dashboardToolbar small{display:block;font-size:12px;color:#8a9581;margin-top:6px}.sharedGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.sharedGrid .careCard{margin:0}.sharedVideo h2{margin:12px 0 5px;font-size:24px}.sharedVideo p{margin:5px 0 18px;font-size:13px}.sharedVideo video{width:100%;border-radius:11px;max-height:320px;background:#172b2a}.savedLabel{display:flex;align-items:center;gap:6px;font-size:12px;color:#6a8059;margin-top:15px}.careCircleLink{display:flex;align-items:center;gap:6px;color:#315d50;text-decoration:none;font-size:13px;border:1px solid #d7e0cd;border-radius:10px;padding:10px 12px;white-space:nowrap}@media(max-width:760px){.careContainer{margin-top:28px;padding:0 16px 40px}.careHeading{gap:14px}.careHeading h1{font-size:30px}.careIcon{width:43px;height:43px;border-radius:13px}.careCard{padding:23px 19px}.careTabs a{font-size:12px;padding:12px}.sharedGrid{grid-template-columns:1fr}.connectionRow .secondary{padding:9px;font-size:12px}.pendingInvite{align-items:flex-start;flex-direction:column}.carePage header{padding:0 20px}.carePage .brand small{font-size:8px}.careBack{font-size:12px}.videoNav{flex-wrap:wrap}.careCircleLink{justify-content:center;flex-basis:100%;font-size:14px;padding:10px}.careCard input{font-size:16px!important}}
 .sharedSeniorNotice{display:flex;gap:9px;align-items:center;padding:11px 25px;background:#edf2e4;color:#627755;font-size:11px;border-bottom:1px solid #dfe7d3}.sharedSeniorNotice svg{flex-shrink:0}.message.caregiver{align-self:flex-start;background:#e8edf2;border:1px solid #d8e1e9;border-radius:17px 17px 17px 3px;padding:16px 22px}.chatScopeTabs{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 14px}.chatScopeTabs button{display:flex;align-items:center;gap:9px;min-height:48px;padding:12px 18px;background:white;border:1px solid #ccd9c2;border-radius:10px;color:#315d50}.chatScopeTabs button.active{background:#315d50;color:white;border-color:#315d50}.privateChat .chatScopeTabs button.active{background:#3f4b68;border-color:#3f4b68}.chatAudience{display:flex;align-items:flex-start;gap:10px;padding:16px;background:#edf3e5;color:#526b43;border-radius:10px;font-size:13px;line-height:1.7}.chatAudience svg{flex-shrink:0;margin-top:4px}.privateChat .chatAudience{background:#eceef5;color:#505d79}.careChatLog{height:330px;overflow:auto;padding:22px 8px;display:flex;flex-direction:column;gap:16px;margin:12px 0}.careChatBubble{max-width:88%;padding:13px 18px;background:#eff3e8;border-radius:13px;align-self:flex-start}.careChatBubble.mine{align-self:flex-end;background:#315d50;color:white}.careChatBubble.participant{background:#e9eef4}.careChatBubble strong{font-size:11px;font-weight:500;opacity:.75}.careChatBubble p{font-size:16px;line-height:1.6;color:inherit;white-space:pre-wrap;margin:7px 0}.careChatBubble small{font-size:10px;color:inherit;opacity:.6}.careChatComposer{display:flex;gap:10px;align-items:center;padding:8px;border:1px solid #d5dfcb;border-radius:12px;background:white}.careChatComposer input{flex:1;min-width:0;border:0!important;margin:0!important;max-width:none!important;outline:none}.careChatComposer .primary{margin:0;min-width:44px}.chatRefresh{margin-top:15px!important;padding:7px 11px!important;min-height:35px!important;font-size:12px!important}.caregiverChat select{display:block;padding:11px;border-radius:9px;border:1px solid #ccd9c2;margin-top:7px;font:inherit}.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(max-width:760px){.sharedSeniorNotice{padding:10px 16px;font-size:10px}.chatScopeTabs button{font-size:13px;flex:1;justify-content:center;padding:11px}.careChatBubble{max-width:96%}.careChatLog{height:320px}.careChatComposer input{padding:9px!important}}
-.chatBody{min-height:0}.chatHeader,.composer,.sharedSeniorNotice{flex-shrink:0}.chatSyncBar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 24px;background:#fffefa;border-bottom:1px solid #e7ecdf;font-size:11px;color:#718264;flex-shrink:0}.chatSyncBar button{border:1px solid #cfdcc4;border-radius:7px;padding:6px 10px;background:white;color:#315d50;font-size:11px}.conversation .activity{flex-shrink:0}.chatSyncBar span{min-width:0}@media(max-width:760px){.chatSyncBar{padding:8px 16px;font-size:10px}}
+.chatBody{min-height:0}.chatHeader,.composer,.sharedSeniorNotice{flex-shrink:0}.videoNav .chatSyncBar{display:flex;align-items:center;gap:10px;margin-left:auto;padding-left:14px;font-size:11px;color:#718264;flex-shrink:0}.videoNav .chatSyncBar button{min-height:auto;border:1px solid #cfdcc4;border-radius:7px;padding:7px 10px;background:white;color:#315d50;font-size:11px}.conversation .activity{flex-shrink:0}.chatSyncBar span{min-width:0;white-space:nowrap}@media(max-width:760px){.videoNav .chatSyncBar{flex-basis:100%;margin-left:0;padding:3px 0 0;justify-content:flex-end;font-size:10px}}
 .checkinReceipt{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:#f1f5e9;border:1px solid #dce6ce;border-radius:12px;color:#547441;align-self:stretch;margin:5px 0}.checkinReceipt>svg{flex-shrink:0;margin-top:2px}.checkinReceipt>div{flex:1;min-width:0}.receiptHeading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}.receiptHeading strong{font-size:14px;font-weight:600;color:#355b31}.receiptHeading time{font-size:11px;color:#7c8b70}.checkinReceipt p{font-size:13px!important;line-height:1.6!important;color:#718364!important;margin:7px 0!important;letter-spacing:0!important}.checkinReceipt p strong{font-weight:500}.checkinReceipt a{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:#315d50;font-weight:600;text-decoration:underline;text-underline-offset:3px;min-height:30px}.videoDetail h1{font-size:30px;margin:18px 0}.videoDetail time{font-size:13px;color:#7e8c70}.videoDetail video{display:block;width:100%;max-height:65vh;background:#172b2a;border-radius:12px;margin:24px 0}.videoDetail .careCard{max-width:850px;margin:auto}.videoDetail .careCard p{font-size:13px}@media(max-width:760px){.checkinReceipt{padding:14px;gap:9px}.receiptHeading strong{font-size:13px}.receiptHeading time{font-size:10px}}
 .cindyComposer{padding:18px 24px 13px;background:#fffefa}.cindyComposer .micStatus{display:flex;align-items:center;gap:9px;font-size:13px;line-height:1.5;color:#7f8c75;margin:0 0 13px}.micStatus>span{width:7px;height:7px;border-radius:50%;background:#a7af9d;flex-shrink:0}.micStatus.on{color:#315d50}.micStatus.on>span{background:#47785b;box-shadow:0 0 0 3px #e6eddf}.cindyComposer form{display:block;padding:0;border:0;background:transparent}.cindyComposer input{display:block;width:100%;border:1px solid #dce4d2;border-radius:12px;background:white;min-height:52px;padding:14px 16px;font-size:17px}.cindyControls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px}.cindyControls button{display:flex;align-items:center;justify-content:center;gap:9px;min-height:49px;border-radius:11px;padding:11px 10px;border:1px solid #cfdbc4;font-size:14px;font-weight:500;background:#fff;color:#315d50;white-space:nowrap}.cindyControls .micControl{background:#edf3e5}.cindyControls .micControl.on{background:#315d50;border-color:#315d50;color:white}.cindyControls .sendControl{background:#315d50;border-color:#315d50;color:white}.cindyControls button:disabled{opacity:.42}.cindyComposer .companionNote{display:block;font-size:10px;color:#9aa48e;text-align:center;margin:11px 0 0}.cindyComposer input:focus-visible{outline:3px solid #b7c9a8;outline-offset:2px}.cindyControls svg{flex-shrink:0}@media(max-width:760px){.cindyComposer{padding:14px 15px 10px}.cindyComposer .micStatus{font-size:11px;margin-bottom:11px}.cindyComposer input{font-size:16px;min-height:48px;padding:12px}.cindyControls{gap:7px;margin-top:10px}.cindyControls button{flex-direction:column;gap:6px;white-space:normal;text-align:center;font-size:11px;line-height:1.3;min-height:63px;padding:9px 5px}.cindyControls svg{width:19px;height:19px}.cindyComposer .companionNote{font-size:9px}}
 
@@ -13,7 +13,7 @@
 
 .sparkLaunch{border:0;background:none;text-align:left;padding:0;width:100%;color:inherit}.sparkCard{margin:22px 0 10px;border:1px solid #dbe5cd;border-radius:16px;background:#f5f7ed;padding:22px}.sparkHeading{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#42663a}.sparkHeading>span{display:flex;align-items:center;gap:9px;font-weight:600}.sparkHeading small{font-size:12px;color:#778568}.sparkSteps{display:flex;gap:7px;margin:18px 0 22px}.sparkSteps span{height:5px;border-radius:8px;background:#dde5d3;flex:1}.sparkSteps .done{background:#527b53}.sparkSteps .current{background:#b68d55}.sparkCard h3{font-size:23px;line-height:1.5;font-weight:500;letter-spacing:-.5px;margin:12px 0;display:flex;align-items:center;gap:8px}.sparkCard p{font-size:15px;line-height:1.7;color:#52674a}.sparkCard .sparkHelp{font-size:13px;color:#78856e}.sparkActions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.sparkCard button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:10px 14px;border:1px solid #c9d7bc;border-radius:9px;background:#fffefa;color:#315d50;font-size:14px}.sparkCard button:disabled{opacity:.5}.sparkCard button:first-child{background:#315d50;border-color:#315d50;color:white}@media(max-width:760px){.sparkCard{padding:18px}.sparkCard h3{font-size:21px}.sparkActions button{flex:1 0 40%}}
 
-.conversation.sparkActive{height:auto;overflow:visible}.sparkActive .chatBody{flex:none;overflow:visible}.sparkActive .welcome{display:none}.sparkActive .messages{max-height:150px;overflow:auto}
+
 
 .chatText{white-space:pre-wrap;overflow-wrap:anywhere}.chatText a{color:#315d50;text-decoration:underline;text-underline-offset:3px;font-weight:600}.message.you .chatText a{color:white}.careChatBubble.mine .chatText a{color:inherit}
 
@@ -23,7 +23,7 @@
 
 .cindyIdentity{min-width:0;flex:1}.chatHeader .avatar{flex-shrink:0}.voiceToggle{margin-left:auto;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:60px;min-width:190px;padding:10px 16px;border:2px solid #315d50;border-radius:12px;background:#fffefa;color:#315d50;text-align:left;flex-shrink:0}.voiceToggle.on{background:#315d50;color:#fffefa}.voiceToggle svg{flex-shrink:0}.voiceToggle .voiceLabels{color:inherit;display:flex;flex-direction:column;gap:4px}.voiceToggle .voiceState{font-size:16px;font-weight:600;color:inherit;line-height:1.3}.voiceToggle .voiceAction{font-size:13px;color:inherit;line-height:1.3}.voiceToggle:disabled{opacity:.5}@media(max-width:540px){.chatHeader{flex-wrap:wrap}.voiceToggle{flex-basis:100%;margin-left:0;min-height:60px}.voiceToggle .voiceState{font-size:17px}.voiceToggle .voiceAction{font-size:14px}}
 
-.demoReset{color:#315d50;font-size:14px;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+.demoReset{background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;color:#315d50;font-size:14px;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
 
 .demoRoleSwitch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:560px;margin:24px auto 0;padding:0 20px}.demoRoleSwitch a{display:flex;align-items:center;justify-content:center;gap:12px;min-height:66px;border:2px solid #cbd7c1;background:#fffefa;border-radius:12px;text-decoration:none;color:#315d50;padding:10px 16px}.demoRoleSwitch a[aria-current=page]{background:#315d50;color:white;border-color:#315d50}.demoRoleSwitch strong{font-size:18px;font-weight:600;display:block}.demoRoleSwitch small{font-size:13px;display:block;margin-top:3px}.demoCaregiver{margin-top:32px}@media(max-width:540px){.demoRoleSwitch{margin-top:16px;gap:8px}.demoRoleSwitch a{gap:8px;padding:10px}.demoRoleSwitch strong{font-size:17px}}
 
@@ -32,3 +32,574 @@
 .receiptVideoButton{min-height:48px;font-size:16px;margin-top:4px}.receiptPlayer{margin-top:14px}.receiptPlayer video{display:block;width:100%;max-height:60svh;object-fit:contain;background:#172b2a;border-radius:10px}.receiptPlayerControls{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.receiptPlayerControls button{min-height:48px;font-size:16px}
 
 .dayCard .sparkLaunch{border:1px solid #cdd9c2;border-radius:12px;background:#fffefa;padding:12px;min-height:70px;gap:12px;margin-top:14px;transition:background .15s,border-color .15s}.dayCard .sparkLaunch:hover:not(:disabled){background:#e7eedf;border-color:#718b60}.dayCard .sparkLaunch:active:not(:disabled){background:#dbe7d1}.dayCard .sparkLaunch>span:not(.taskIcon):not(.shortcutArrow),.dayCard .sparkLaunch>div{flex:1;text-align:left}.shortcutArrow{font-size:28px;color:#315d50;line-height:1}.dayCard .taskIcon{flex-shrink:0}.shortcutHelp{font-size:13px;line-height:1.5;color:#5c6f50;margin:14px 0 0}
+
+/* Align the Senior Member introduction with the conversation panel. */
+.layout > .seniorDay{padding-top:0}.layout > .seniorDay > h1{margin-top:0}
+
+.layout > .seniorDay > h1{font-size:34px;line-height:1.15;letter-spacing:-1px}
+
+/* Mac and iPad: keep the composer in view; only the conversation scrolls. */
+@media (min-width:761px){
+ .seniorApp{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+ .seniorApp>header{height:76px;min-height:76px;padding:0 3%}
+ .seniorApp>.layout{width:100%;max-width:1600px;flex:1;min-height:0;padding:18px 3%;gap:28px;grid-template-columns:minmax(250px,30%) minmax(0,1fr)}
+ .seniorApp .seniorDay{min-height:0;overflow-y:auto;padding:0 4px 4px 0;overscroll-behavior:contain}
+ .seniorApp .seniorDay>h1{font-size:30px;line-height:1.12;margin:0 0 16px}
+ .seniorApp .dayCard{margin-top:0;padding:16px;border-radius:15px}
+ .seniorApp .dayCard .sparkLaunch{margin-top:10px;min-height:60px;padding:9px;gap:10px}
+ .seniorApp .taskIcon{width:36px;height:36px;flex-shrink:0}
+ .seniorApp .task strong{font-size:15px}.seniorApp .task small{font-size:12px;margin-top:3px}
+ .seniorApp .seniorDay>.demoRoleSwitch{margin:14px 0 0;padding:0;gap:8px;max-width:none}
+ .seniorApp .seniorDay .demoRoleSwitch a{padding:9px 6px;gap:7px;min-height:60px}
+ .seniorApp .demoRoleSwitch strong{font-size:16px}.seniorApp .demoRoleSwitch small{font-size:11px}
+ .seniorApp .conversation{height:100%;min-height:0;min-width:0;overflow:hidden}
+ .seniorApp .chatBody{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:18px 24px}
+ .seniorApp .chatHeader{padding:12px 20px;gap:10px}
+ .seniorApp .voiceToggle{min-height:52px;min-width:170px;padding:8px 12px}
+ .seniorApp .voiceToggle .voiceState{font-size:15px}
+ .seniorApp .videoNav{padding:8px 20px}
+ .seniorApp .sharedSeniorNotice{padding:8px 20px}
+ .seniorApp .cindyComposer{padding:12px 20px 10px;flex-shrink:0}
+ .seniorApp .cindyComposer .micStatus{margin-bottom:8px}
+ .seniorApp .cindyComposer input{min-height:48px;padding:10px 14px}
+ .seniorApp .cindyControls{margin-top:8px;gap:8px}
+ .seniorApp .cindyControls button{min-height:48px;padding:9px 7px;white-space:normal;font-size:14px}
+ .seniorApp .cindyComposer .companionNote{margin-top:7px}
+ .seniorApp .history{flex:1;min-height:0;overflow:auto}
+ .seniorApp>footer{display:none}
+ .seniorApp .cameraActive .messages,.seniorApp .moveActive .messages{max-height:120px;overflow:auto}
+ .seniorApp .activity video{max-height:35dvh;object-fit:contain}
+}
+@media (min-width:761px) and (max-height:740px){
+ .seniorApp>header{height:64px;min-height:64px}
+ .seniorApp>.layout{padding-top:12px;padding-bottom:12px;gap:22px}
+ .seniorApp .seniorDay>h1{font-size:26px;margin-bottom:12px}
+ .seniorApp .dayCard{padding:12px}
+ .seniorApp .dayCard .sparkLaunch{min-height:54px;margin-top:8px;padding:7px}
+ .seniorApp .seniorDay>.demoRoleSwitch{margin-top:10px}
+ .seniorApp .chatHeader{padding-top:9px;padding-bottom:9px}
+}
+
+/* Anchor the demo role selector to the same bottom edge as Sandy's panel. */
+@media (min-width:761px){
+ .seniorApp .seniorDay{display:flex;flex-direction:column;padding-bottom:0}
+ .seniorApp .seniorDay>.dayCard{flex-shrink:0}
+ .seniorApp .seniorDay>.demoRoleSwitch{margin-top:auto;padding-top:14px;flex-shrink:0}
+}
+
+/* Match the role buttons' lower edge to the microphone control row. */
+@media (min-width:761px){
+ .seniorApp .seniorDay>.demoRoleSwitch{margin-bottom:30px}
+}
+
+/* Give Sandy a clear, readable identity above her availability status. */
+.seniorApp .cindyIdentity h2{font-size:34px;line-height:1.1;margin:0 0 6px}
+.seniorApp .cindyIdentity>span{display:block;font-size:14px;line-height:1.4}
+
+/* A compact Care Circle between the activity shortcuts and demo role controls. */
+.demoCareCircle{width:280px;max-width:100%;aspect-ratio:1;border-radius:50%;border:2px solid #d7dfce;background:#f8f6f1;color:#193e37;margin:16px auto;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.demoCareCircle h2{font-size:14px;font-weight:600;margin:0 0 9px;line-height:1.2;letter-spacing:0}
+.careVenn{position:relative;width:76%;aspect-ratio:1.15;isolation:isolate}
+.careDisc{position:absolute;width:57%;aspect-ratio:1;border:1px solid #9eaf91;border-radius:50%}
+.careDiscDonna{top:0;left:21.5%;background:#bdcfb7b8}.careDiscSandy{bottom:0;left:0;background:#d3ddc699}.careDiscPat{bottom:0;right:0;background:#e4eadb99}
+.carePerson{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:3px;z-index:2;white-space:nowrap}
+.carePersonDonna{left:50%;top:27%}.carePersonSandy{left:26%;top:74%}.carePersonPat{left:74%;top:74%}
+.carePerson svg{width:14px;height:14px}.carePerson strong{font-size:13px;font-weight:600}.carePerson small{font-size:11px;line-height:1.2}
+.careVennHeart{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);width:15px;height:15px;stroke:#b47b50;fill:#b47b50;stroke-width:1.7;z-index:3}
+@media(min-width:761px){.seniorApp .demoCareCircle{margin:14px auto}.seniorApp .seniorDay>.demoRoleSwitch{padding-top:0}}
+
+/* Keep demo view switching in the app header on both role screens. */
+header>.demoRoleSwitch{margin:0;padding:0;max-width:350px;width:350px;gap:8px;flex-shrink:1}
+header>.demoRoleSwitch a{min-height:48px;padding:5px 14px;gap:9px;border-radius:10px}
+header>.demoRoleSwitch strong{font-size:15px}header>.demoRoleSwitch small{font-size:11px;margin-top:2px}
+header>.demoRoleSwitch svg{width:19px;height:19px;flex-shrink:0}
+@media(min-width:761px){.seniorApp>header,.carePage>header{gap:18px}.seniorApp .demoCareCircle{margin:14px auto 0}}
+@media(min-width:761px) and (max-width:1050px){header>.demoRoleSwitch{width:285px}header>.demoRoleSwitch a{padding:5px 8px}.headerRight{gap:12px}}
+@media(max-width:760px){.seniorApp>header,.carePage>header{height:auto;min-height:80px;flex-wrap:wrap;gap:12px;padding-top:12px;padding-bottom:12px}header>.demoRoleSwitch{order:3;width:100%;max-width:none;flex-basis:100%}}
+
+/* Match each header role control to the compact DEMO badge. */
+header>.demoRoleSwitch{width:auto;max-width:none;display:flex;gap:8px;flex-shrink:0}
+header>.demoRoleSwitch a{box-sizing:border-box;min-height:0;width:59px;height:31px;padding:9px 0;border-width:1px;border-radius:5px;gap:0;font-size:10px;line-height:11px}
+header>.demoRoleSwitch a svg,header>.demoRoleSwitch a small{display:none}
+header>.demoRoleSwitch a strong{font-size:10px;line-height:11px;font-weight:600;letter-spacing:.5px}
+@media(max-width:760px){header>.demoRoleSwitch{order:initial;flex-basis:auto;width:auto}}
+
+/* Match DEMO's height while retaining each full role label. */
+header>.demoRoleSwitch a{width:auto;height:31px;min-height:31px;padding:0 12px;white-space:nowrap}
+header>.demoRoleSwitch a strong{font-size:12px;line-height:1.2;letter-spacing:0;font-weight:500}
+
+/* Explicit shared height for all three header badges, including border and padding. */
+header>.demoRoleSwitch a,header .previewBadge{box-sizing:border-box;height:30px;min-height:30px;max-height:30px;padding:0 12px;align-items:center;justify-content:center;line-height:1.2}
+header .previewBadge{display:inline-flex}
+
+/* Equal demo view buttons with centered full labels. */
+header>.demoRoleSwitch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:max-content}
+header>.demoRoleSwitch a{width:100%;height:30px;min-height:30px;max-height:30px;text-align:center;justify-content:center;padding:0 12px}
+header>.demoRoleSwitch a>span{width:100%;text-align:center}
+
+.headerBrandGroup{display:flex;align-items:center;gap:12px;flex-shrink:0}
+@media(min-width:761px){.seniorApp>header,.carePage>header{display:grid;grid-template-columns:1fr auto 1fr}.seniorApp>header>.headerRight,.carePage>header>.headerRight{justify-self:end}}
+
+/* Introduce the Care Circle, then the daily activities. */
+.seniorApp .seniorDay>.demoCareCircle{margin:0 auto 18px}
+.seniorApp .seniorDay>h1{font-size:20px;line-height:1.4;letter-spacing:-.5px;margin:0 0 12px;text-wrap:pretty;flex-shrink:0}
+@media(min-width:761px) and (max-width:1050px){.seniorApp .seniorDay>h1{font-size:18px}}
+@media(min-width:761px) and (max-height:740px){.seniorApp .seniorDay>.demoCareCircle{margin-bottom:12px}}
+
+.seniorApp .seniorDay>h1{text-align:center;width:100%}
+
+/* Keep every role label within its circle at the larger size. */
+.demoCareCircle .carePerson{white-space:normal;text-align:center}
+.demoCareCircle .carePersonSandy{top:72%;width:70px}
+.demoCareCircle .carePersonSandy small{max-width:65px}
+
+.brandLogo{display:block;width:47px;height:47px;object-fit:contain;border-radius:9px;flex-shrink:0}
+
+.sandyChatAvatar{width:49px;height:49px;object-fit:contain;border-radius:10px;flex-shrink:0}.sandyWelcomeLogo{display:inline-block;width:65px;height:65px;object-fit:contain;border-radius:13px}
+
+.welcomeCoffee{flex:none;width:clamp(42px,8vw,65px);height:auto;object-fit:contain;border-radius:50%}
+
+.composerStatusRow{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 13px}.cindyComposer .composerStatusRow .micStatus{margin:0}.sharedComposerStatus{display:flex;align-items:center;gap:7px;color:#627755;font-size:11px;white-space:nowrap}.sharedComposerStatus svg{flex-shrink:0}@media(max-width:760px){.composerStatusRow{align-items:flex-start;flex-wrap:wrap;gap:7px 14px;margin-bottom:11px}.sharedComposerStatus{font-size:10px}}.seniorApp .composerStatusRow{margin-bottom:8px}
+
+/* Caregiver daily overview */
+.cgColumns{max-width:1280px;margin:32px auto;padding:0 28px 60px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:start}.cgDay h1{font-family:Georgia,serif;font-size:36px;font-weight:400;letter-spacing:-1px;margin:12px 0}.cgSubtitle{color:#697184;line-height:1.6;margin:0 0 24px}.cgSummary{position:relative;padding:24px;background:#fffefa;border:1px solid #e3ddd3;border-radius:18px}.cgSummary h2,.cgDetail h2{font:400 23px Georgia,serif;color:#141e36;margin:12px 0}.cgSummary p{font-size:17px;line-height:1.7;color:#303c50}.cgMeta{font-size:12px;line-height:1.6;color:#697184;display:block}.cgRefresh{display:flex;gap:7px;align-items:center;background:transparent;border:0;padding:14px 0 0;color:#8e5d40;font-size:12px}.cgAttention{padding:20px 0;margin-bottom:16px;border-bottom:1px solid #e3ddd3;color:#141e36}.cgAttention strong{font-size:14px;font-weight:600}.cgAttention p{font-size:15px;margin:8px 0}.cgAttention small{color:#697184;font-size:12px;line-height:1.6}.cgExplore{font:400 22px Georgia,serif;margin:0 0 16px}.cgTiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cgTiles>button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:9px;padding:20px;border:1px solid #e3ddd3;border-radius:15px;background:#fffefa;color:#141e36;min-width:0}.cgTiles>button:hover{border-color:#ac7956;background:#faf4ec}.cgTiles>button>svg{color:#a56e49;width:22px;height:22px}.cgTiles strong{font-size:16px;font-weight:600}.cgTiles span{font-size:12px;line-height:1.6;color:#697184}.cgTiles span:last-child{display:flex;align-items:center;gap:5px;color:#8e5d40}.cgQuick{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.cgOverview .primary{background:#141e36;border-color:#141e36}.cgOverview .secondary{color:#141e36;border-color:#ddd8cf}.cgDetail{padding:22px;background:#fffefa;border:1px solid #e3ddd3;border-radius:16px;margin-top:20px}.cgDetail p{font-size:15px;line-height:1.7}.cgDetail small{font-size:12px;color:#697184;line-height:1.6}.cgRecording{padding:18px 0;border-top:1px solid #e3ddd3}.cgRecording h3{font-size:16px}.cgRecording video{width:100%;max-height:310px;background:#141e36;border-radius:10px}.cgOverview .caregiverChat{margin:0;padding:24px;background:#fffefa;border-color:#e3ddd3}.cgOverview .cardTitle,.cgOverview .cardTitle h2{color:#141e36}.cgOverview .cardTitle h2{font:400 23px Georgia,serif}.cgOverview .chatScopeTabs{flex-wrap:nowrap;gap:7px}.cgOverview .chatScopeTabs button{font-size:12px;padding:12px 10px;flex:1;justify-content:center;color:#141e36;border-color:#ded9d0}.cgOverview .chatScopeTabs button.active{background:#141e36;color:#fffefa;border-color:#141e36}.cgOverview .chatAudience{background:#f3f0e9;color:#596173;font-size:12px}.cgOverview .careChatLog{height:350px}.cgOverview .careChatBubble{background:#f3f0e9;color:#141e36}.cgOverview .careChatBubble.mine{background:#141e36;color:#fffefa}.cgOverview .careChatComposer input{font-size:16px}.cgOverview #cg-conversations{min-width:0}.cgOverview .eyebrow{color:#95623f}.cgOverview button:focus-visible{outline:3px solid #b68561;outline-offset:3px}@media(max-width:900px){.cgColumns{gap:20px;padding:0 20px 40px;grid-template-columns:1fr 1fr}.cgOverview .caregiverChat{padding:18px}.cgTiles>button{padding:15px}.cgOverview .chatScopeTabs{flex-wrap:wrap}}@media(max-width:700px){.cgColumns{grid-template-columns:1fr;padding:0 16px 40px}.cgDay h1{font-size:30px}.cgOverview .careChatLog{height:330px}.cgTiles strong{font-size:15px}}
+.cgStatusPanel{padding:22px 24px;margin:24px 0 18px;background:#fffefa;border:1px solid #e3ddd3;border-radius:18px}.cgStatusHeading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}.cgStatusHeading h2{font:400 23px Georgia,serif;margin:0;color:#141e36}.cgStatusBadge{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:20px;font-size:12px;background:#fff3d0;color:#795600}.statusGreen .cgStatusBadge{background:#e8f1df;color:#3d622d}.statusRed .cgStatusBadge{background:#fae8e4;color:#a0372d}.cgStatusDot{display:inline-block;width:9px;height:9px;border-radius:50%;background:currentColor;flex-shrink:0}.cgProgressHeading{display:flex;justify-content:space-between;gap:12px;font-size:13px;margin-bottom:11px;color:#596173}.cgProgressHeading strong{font-weight:500}.cgProgressHeading>span{font-variant-numeric:tabular-nums;color:#141e36}.cgProgressTrack{height:10px;border-radius:8px;background:#ece8e0;overflow:hidden;margin-bottom:20px}.cgProgressTrack>div{height:100%;background:#d19b21;border-radius:8px;transition:width .2s}.statusGreen .cgProgressTrack>div{background:#638147}.cgStatusRows{display:flex;flex-direction:column;gap:14px}.cgStatusRow{display:grid;grid-template-columns:9px minmax(0,1fr) auto;gap:10px;align-items:center;font-size:13px}.cgStatusRow strong{font-weight:500;color:#141e36}.cgStatusRow>span:last-child{font-size:12px;color:#697184;text-align:right}.dotGreen{background:#5e813d}.dotYellow{background:#d19b21}.dotRed{background:#c64b40}.dotNeutral{background:#89909b}.cgStatusLegend{display:flex;gap:16px;flex-wrap:wrap;border-top:1px solid #e8e2d9;padding-top:15px;margin-top:20px;color:#697184;font-size:11px}.cgStatusLegend>span{display:flex;gap:6px;align-items:center}.cgStatusLegend i{width:7px;height:7px}.cgOverviewStamp{display:flex;flex-direction:column;gap:5px;color:#697184;font-size:12px;line-height:1.6;margin:0 0 14px}.cgOverviewStamp time{color:#485166}@media(max-width:400px){.cgStatusPanel{padding:20px 16px}.cgStatusRow{grid-template-columns:9px minmax(0,1fr)}.cgStatusRow>span:last-child{grid-column:2;text-align:left}.cgStatusLegend{gap:10px}}@media(prefers-reduced-motion:reduce){.cgProgressTrack>div{transition:none}}
+/* Compact Mac and iPad caregiver workspace */
+.cgOverview>header{height:76px;min-height:76px;padding:0 28px}.cgOverview .cgColumns{max-width:1440px;margin:0 auto;padding:20px 28px;grid-template-columns:minmax(0,55fr) minmax(0,45fr);gap:24px;align-items:stretch;min-height:calc(100dvh - 76px)}.cgDay{min-width:0}.cgOverview .cgDay h1{font-size:28px;margin:6px 0 14px}.cgOverview .cgDay>.eyebrow{font-size:10px}.cgOverview .cgStatusPanel{padding:16px 20px;margin:0 0 12px}.cgOverview .cgStatusHeading{margin-bottom:12px}.cgOverview .cgStatusHeading h2{font-size:20px}.cgOverview .cgStatusBadge{padding:5px 9px}.cgOverview .cgProgressHeading{margin-bottom:8px}.cgOverview .cgProgressTrack{height:8px;margin-bottom:13px}.cgOverview .cgStatusRows{gap:10px}.cgOverview .cgStatusLegend{padding-top:10px;margin-top:12px;gap:14px}.cgOverview .cgSummary{padding:16px 20px}.cgOverview .cgSummary>.eyebrow{font-size:10px}.cgOverview .cgSummary h2{font-size:20px;margin:5px 0 7px}.cgOverview .cgOverviewStamp{flex-direction:row;flex-wrap:wrap;gap:4px 12px;margin:0 0 9px;font-size:11px}.cgOverview .cgSummary p{font-size:15px;line-height:1.5;margin:8px 0}.cgOverview .cgMeta{font-size:11px}.cgOverview .cgRefresh{position:absolute;right:18px;top:13px;padding:4px;font-size:11px}.cgOverview .cgExplore{font-size:17px;margin:14px 0 9px}.cgOverview .cgTiles{gap:10px}.cgOverview .cgTiles>button{display:grid;grid-template-columns:22px minmax(0,1fr);column-gap:10px;row-gap:3px;padding:12px 14px;min-height:68px;border-radius:12px;align-content:center}.cgOverview .cgTiles>button>svg{grid-row:1 / 3;align-self:center;width:20px;height:20px}.cgOverview .cgTiles strong{font-size:14px;line-height:1.4}.cgOverview .cgTiles span,.cgOverview .cgTiles span:last-child{display:block;color:#697184;font-size:12px;line-height:1.4}.cgOverview #cg-conversations{display:flex;min-height:0}.cgOverview .caregiverChat{display:flex;flex-direction:column;flex:1;min-width:0;padding:20px;margin:0}.cgOverview .cardTitle{margin-bottom:4px}.cgOverview .cardTitle h2{font-size:21px}.cgOverview .chatScopeTabs{margin:14px 0 10px}.cgOverview .chatAudience{padding:12px;font-size:12px;line-height:1.5}.cgOverview .careChatLog{height:auto;flex:1;min-height:150px;max-height:calc(100dvh - 420px);margin:8px 0;padding:12px 4px}.cgOverview .careChatBubble p{font-size:15px;line-height:1.5}.cgOverview .careChatComposer{flex-shrink:0;padding:5px}.cgOverview .chatRefresh{align-self:flex-start;margin-top:10px!important}.cgDetailDialog{color:#141e36;border:1px solid #e3ddd3;border-radius:18px;background:#fffefa;padding:24px;width:min(640px,calc(100vw - 32px));max-height:85dvh;overflow:auto}.cgDetailDialog::backdrop{background:rgba(20,30,54,.45)}.cgDetailDialog .cgDetail{border:0;margin:0;padding:0;background:transparent}.cgDetailDialog .cgDetail h2{padding-right:38px;margin-top:0}.cgDialogClose{position:absolute;right:14px;top:14px;background:#f3f0e9;border:0;border-radius:50%;width:40px;height:40px;display:grid;place-items:center;color:#141e36}.cgDetailDialog .cgRecording video{max-height:50dvh}body:has(.cgDetailDialog[open]){overflow:hidden}.cgMobileChat{display:none}@media(min-width:901px) and (max-height:820px){.cgOverview .cgColumns{padding-top:14px;padding-bottom:14px;gap:20px}.cgOverview>header{height:68px;min-height:68px}.cgOverview .cgColumns{min-height:calc(100dvh - 68px)}.cgOverview .cgDay h1{font-size:26px;margin-bottom:10px}.cgOverview .cgStatusPanel{padding:14px 18px}.cgOverview .cgSummary{padding:14px 18px}.cgOverview .cgTiles>button{min-height:62px;padding:10px 12px}.cgOverview .cgExplore{margin-top:11px}.cgOverview .cgStatusRows{gap:8px}.cgOverview .cgStatusHeading{margin-bottom:10px}}
+@media(max-width:900px) and (orientation:portrait),(max-width:700px){.cgOverview .cgColumns{grid-template-columns:1fr;min-height:auto;padding:20px 16px;gap:20px}.cgOverview>header{height:auto;min-height:76px;padding:12px 16px}.cgOverview #cg-conversations{min-height:560px;scroll-margin-top:12px}.cgOverview .careChatLog{max-height:420px;min-height:240px}.cgMobileChat{display:block;position:sticky;bottom:12px;width:max-content;max-width:calc(100% - 32px);margin:0 auto 16px;padding:13px 18px;border-radius:24px;background:#141e36;color:#fffefa;text-decoration:none;font-size:14px;box-shadow:0 3px 12px #141e3626}.cgOverview .cgSummary .cgRefresh{position:static;margin-top:7px}.cgOverview .cgOverviewStamp{flex-direction:column}.cgOverview .cgTiles>button{min-height:72px}}
+/* Align caregiver column headings and content bottoms */
+.cgOverview .cgColumns{min-height:0;align-items:stretch}.cgOverview .cgColumnHeading{height:72px;display:flex;flex-direction:column;justify-content:flex-start;padding-top:2px;gap:6px}.cgOverview .cgColumnHeading h1,.cgOverview .cgColumnHeading h2{font:400 26px Georgia,serif;letter-spacing:-.5px;color:#141e36;margin:0}.cgOverview .cgColumnHeading p{margin:0;font-size:12px;line-height:1.5;color:#8e5d40}.cgOverview #cg-conversations{display:flex;flex-direction:column;min-height:0}.cgOverview #cg-conversations>.cgColumnHeading{flex-shrink:0;justify-content:center;padding-top:0;padding-bottom:var(--cg-column-top,0px)}.cgOverview #cg-conversations>.caregiverChat{flex:1;min-height:0}.cgOverview #cg-conversations .chatScopeTabs{margin-top:0}.cgOverview #cg-conversations .careChatLog{flex:1 1 0;min-height:100px;max-height:none;overflow:auto}.cgOverview #cg-conversations .chatAudience,.cgOverview #cg-conversations .chatScopeTabs,.cgOverview #cg-conversations .careChatComposer,.cgOverview #cg-conversations .chatRefresh{flex-shrink:0}@media(max-width:1100px){.cgOverview .cgColumnHeading h1,.cgOverview .cgColumnHeading h2{font-size:23px}}@media(max-width:900px) and (orientation:portrait),(max-width:700px){.cgOverview .cgColumnHeading{height:auto;min-height:62px}.cgOverview #cg-conversations{min-height:0}.cgOverview #cg-conversations .caregiverChat{min-height:500px}.cgOverview #cg-conversations .careChatLog{flex:auto;height:280px;max-height:360px}}
+.cgOverview #cg-conversations{padding-top:0}
+/* Keep growing overview and chat content inside the available screen */
+.cgOverview .cgColumns{height:min(790px,calc(100dvh - 76px));min-height:650px;box-sizing:border-box}.cgOverview .cgDay{display:flex;flex-direction:column;min-height:0}.cgOverview .cgDay>.cgColumnHeading,.cgOverview .cgStatusPanel,.cgOverview .cgExplore,.cgOverview .cgTiles{flex-shrink:0}.cgOverview .cgSummary{display:flex;flex-direction:column;flex:1 1 auto;min-height:170px;overflow:hidden}.cgOverview .cgSummary>.eyebrow,.cgOverview .cgSummary>h2,.cgOverview .cgOverviewStamp,.cgOverview .cgMeta{flex-shrink:0}.cgSummaryBody{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;flex:1 1 auto;padding-right:7px}.cgOverview .cgSummaryBody p{font-size:14px;margin:8px 0;line-height:1.5}.cgFirstChat{padding:7px 0 10px;border-bottom:1px solid #e3ddd3;margin-bottom:9px}.cgFirstChat>strong{font-size:13px;font-weight:500}.cgFirstChat>time{font-size:12px;color:#8e5d40;margin-left:10px}.cgOverview .cgSummaryBody .cgOverviewEvent{font-size:12px;color:#596173}.cgOverviewEvent time{color:#8e5d40;margin-right:5px}.cgOverview .cgMeta{margin-top:8px}.cgOverview #cg-conversations{height:100%;min-height:0}.cgOverview #cg-conversations>.caregiverChat{overflow:hidden}.cgOverview #cg-conversations .careChatLog{overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;min-height:0}.cgOverview .cgDay>.careError{max-height:70px;overflow:auto;flex-shrink:0;margin:8px 0;padding:10px;font-size:12px}@media(min-width:901px) and (max-height:820px){.cgOverview .cgColumns{height:calc(100dvh - 68px);min-height:640px}}@media(max-width:900px) and (orientation:portrait),(max-width:700px){.cgOverview .cgColumns{height:auto;min-height:0}.cgOverview .cgSummary{flex:0 1 auto;max-height:340px;min-height:210px}.cgOverview .cgSummaryBody{flex:1 1 auto}.cgOverview #cg-conversations{height:600px;min-height:0}.cgOverview #cg-conversations>.caregiverChat{min-height:0}.cgOverview #cg-conversations .careChatLog{height:auto;max-height:none;flex:1 1 0}}
+.cgUpdateHeading{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}.cgUpdateHeading strong{font-size:13px;font-weight:500;color:#141e36}.cgUpdateHeading time,.cgOverviewEvent time{font-size:12px;font-variant-numeric:tabular-nums;color:#8e5d40;white-space:nowrap}.cgOverviewUpdate{padding:4px 0 10px}.cgOverview .cgSummaryBody .cgOverviewEvent{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;font-size:13px;padding:10px 0;border-top:1px solid #e3ddd3}.cgOverviewEvent time{margin:0}
+/* Center column headings, green chat selection, and leading local timestamps */
+.cgOverview .cgColumnHeading{align-items:center;text-align:center}.cgOverview .chatScopeTabs button.active,.cgOverview .privateChat .chatScopeTabs button.active{background:#556b2f;color:#fffefa;border-color:#556b2f}.cgOverview .chatScopeTabs button:not(.active){background:#f0f4e9;color:#405325;border-color:#ccd7bb}.cgUpdateHeading{justify-content:flex-start;align-items:baseline;flex-wrap:wrap;gap:6px 12px}.cgUpdateHeading time{order:-1}.cgOverview .cgSummaryBody .cgOverviewEvent{justify-content:flex-start;gap:6px 12px}.cgOverviewEvent time{order:-1}.cgUpdateHeading time,.cgOverviewEvent time{min-width:100px;flex-shrink:0}
+/* Today’s status alongside seven-day completion counts */
+.cgTopPanels{display:grid;grid-template-columns:minmax(0,55fr) minmax(0,45fr);gap:12px;margin-bottom:12px;flex-shrink:0;align-items:stretch}.cgOverview .cgTopPanels .cgStatusPanel{margin:0;padding:15px 16px;min-width:0}.cgOverview .cgTopPanels .cgStatusHeading{gap:7px;margin-bottom:10px}.cgOverview .cgTopPanels .cgStatusHeading h2{font-size:19px}.cgOverview .cgTopPanels .cgStatusBadge{font-size:11px}.cgOverview .cgTopPanels .cgStatusRow{grid-template-columns:9px minmax(0,1fr);column-gap:8px;row-gap:2px}.cgOverview .cgTopPanels .cgStatusRow>span:last-child{grid-column:2;text-align:left;font-size:11px}.cgOverview .cgTopPanels .cgStatusRow strong{font-size:12px}.cgOverview .cgTopPanels .cgStatusRows{gap:7px}.cgOverview .cgTopPanels .cgStatusLegend{gap:6px 10px;font-size:10px;margin-top:10px;padding-top:9px}.cgOverview .cgTopPanels .cgStatusLegend span{gap:4px}.cgOverview .cgTopPanels .cgProgressHeading{font-size:11px}.cgEngagement{background:#fffefa;border:1px solid #e3ddd3;border-radius:18px;padding:15px 16px;min-width:0;display:flex;flex-direction:column}.cgEngagement h2{font:400 19px Georgia,serif;margin:0 0 6px;color:#141e36}.cgChartPeriod{font-size:11px;line-height:1.4;color:#596173}.cgChartDates{font-size:10px;color:#697184;margin-top:3px}.cgBarChart{display:flex;flex-direction:column;gap:17px;margin:16px 0;flex:1;justify-content:center}.cgChartRow>div:first-child{display:flex;align-items:baseline;justify-content:space-between;gap:8px;font-size:11px;line-height:1.4;margin-bottom:6px;color:#485166}.cgChartRow strong{font-variant-numeric:tabular-nums;font-size:13px;font-weight:500;color:#141e36}.cgChartTrack{height:10px;background:#ece8e0;border-radius:4px;overflow:hidden}.cgChartTrack>div{height:100%;background:#a56e49;border-radius:4px}.cgChartFoot{font-size:10px;color:#697184;line-height:1.4}.cgOverview .cgTopPanels+.cgSummary{min-height:170px}@media(max-width:1100px) and (min-width:701px) and (orientation:landscape){.cgOverview .cgTopPanels{gap:8px}.cgOverview .cgTopPanels .cgStatusPanel,.cgEngagement{padding:12px}.cgOverview .cgTopPanels .cgStatusHeading h2,.cgEngagement h2{font-size:17px}.cgOverview .cgTopPanels .cgStatusLegend{font-size:10px;gap:5px}.cgOverview .cgTopPanels .cgStatusBadge{font-size:10px;padding:4px 7px}.cgOverview .cgTopPanels .cgStatusRows{gap:5px}.cgBarChart{gap:14px;margin:12px 0}}@media(max-width:420px){.cgTopPanels{grid-template-columns:1fr}.cgOverview .cgTopPanels .cgStatusRow{grid-template-columns:9px minmax(0,1fr) auto}.cgOverview .cgTopPanels .cgStatusRow>span:last-child{grid-column:auto}.cgBarChart{gap:12px}}
+@media(max-width:1100px) and (min-width:701px) and (orientation:landscape){.cgOverview .cgColumnHeading{height:62px}.cgOverview .cgTopPanels+.cgSummary{min-height:150px}}
+/* One-third attention, two-thirds Sunday–Saturday grouped chart */
+.cgOverview .cgTopPanels{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:12px}.cgAttentionGroup{display:flex;flex-direction:column;min-width:0;gap:7px}.cgAttentionGroup>.cgStatusBadge{align-self:flex-start;min-height:20px;box-sizing:border-box}.cgOverview .cgAttentionGroup>.cgStatusPanel{flex:1;min-width:0;padding:13px 12px}.cgOverview .cgTopPanels .cgStatusHeading h2{font-size:18px}.cgOverview .cgTopPanels .cgProgressHeading{justify-content:flex-start;gap:5px;flex-wrap:wrap}.cgOverview .cgTopPanels .cgProgressHeading strong{white-space:nowrap}.cgOverview .cgAttentionGroup .cgStatusRows{gap:7px}.cgOverview .cgAttentionGroup .cgStatusLegend{gap:5px 8px;line-height:1.3}.cgWeeklyEngagement{margin-top:27px;padding:13px 15px}.cgWeeklyEngagement h2{font-size:18px}.cgWeeklyEngagement .cgChartPeriod{font-size:11px}.cgWeekAxisTitle{font-size:10px;color:#697184;margin:9px 0 5px}.cgWeekChart{display:grid;grid-template-columns:20px minmax(0,1fr);grid-template-rows:110px 20px;column-gap:5px}.cgWeekTicks{display:flex;flex-direction:column;justify-content:space-between;font-size:10px;color:#697184;text-align:right;line-height:1;transform:translateY(4px)}.cgWeekPlot{position:relative;min-width:0;border-bottom:1px solid #cfc9be}.cgWeekGrid{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}.cgWeekGrid>span{border-top:1px solid #e9e4db}.cgWeekGroups{position:absolute;inset:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.cgOverview .cgDayBars{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:3px;min-width:0;width:100%;height:100%;margin:0;padding:0 3px;background:transparent;border:0;border-radius:0}.cgOverview .cgDayBars.future{background:repeating-linear-gradient(135deg,#f3f0e9,#f3f0e9 3px,#faf8f2 3px,#faf8f2 6px);opacity:.65}.cgDayBars[aria-pressed=true]{outline:1px solid #a56e49;outline-offset:1px}.cgWeekBar{display:block;width:25%;max-width:16px;flex:1;border-radius:2px 2px 0 0}.series0{background:#a56e49}.series1{background:#141e36}.series2{background:#556b2f}.cgWeekLabels{grid-column:2;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));font-size:10px;text-align:center;color:#596173;padding-top:5px}.cgWeekLegend{display:flex;gap:7px 12px;flex-wrap:wrap;margin:8px 0 6px;font-size:10px;color:#596173}.cgWeekLegend>span{display:flex;align-items:center;gap:4px}.cgWeekLegend i{display:inline-block;width:8px;height:8px;border-radius:2px}.cgWeeklyEngagement .cgChartFoot{min-height:26px;font-size:10px;line-height:1.4}.cgOverview .cgAttentionGroup .cgStatusRow strong{font-size:12px}.cgOverview .cgAttentionGroup .cgStatusRow>span:last-child{font-size:11px}@media(max-width:1100px) and (min-width:701px) and (orientation:landscape){.cgOverview .cgAttentionGroup>.cgStatusPanel{padding:11px 9px}.cgOverview .cgTopPanels .cgStatusHeading h2{font-size:16px}.cgOverview .cgAttentionGroup .cgStatusLegend{font-size:9px}.cgWeeklyEngagement{padding:11px}.cgWeekGroups{gap:2px}.cgOverview .cgDayBars{gap:2px;padding:0 2px}.cgWeekChart{grid-template-rows:100px 20px}.cgOverview .cgTopPanels+.cgSummary{min-height:130px}}@media(max-width:500px){.cgOverview .cgTopPanels{grid-template-columns:1fr}.cgWeeklyEngagement{margin-top:0}.cgOverview .cgAttentionGroup .cgStatusRow{grid-template-columns:9px minmax(0,1fr) auto}.cgOverview .cgAttentionGroup .cgStatusRow>span:last-child{grid-column:auto}.cgWeekChart{grid-template-rows:130px 20px}}
+.cgAttentionGroup>.cgStatusBadge{height:20px;min-height:20px;padding:3px 8px;font-size:11px;line-height:14px}.cgWeekChart{grid-template-rows:90px 20px}.cgWeeklyEngagement .cgChartFoot{height:26px;overflow:auto;flex-shrink:0}@media(max-width:1100px) and (min-width:701px) and (orientation:landscape){.cgWeekChart{grid-template-rows:80px 20px}}@media(max-width:500px){.cgWeekChart{grid-template-rows:130px 20px}}
+.cgWeekBar.zeroMove,.cgWeekLegend i.zeroMove{background:repeating-linear-gradient(135deg,#9eb77e,#9eb77e 1px,#f0f5e8 1px,#f0f5e8 4px)}.cgOverview #cg-conversations>.caregiverChat>.careError{flex-shrink:0;max-height:110px;overflow:auto;margin:8px 0 0;padding:12px;font-size:12px}
+/* Viewport-sized caregiver workspace with aligned panel edges. */
+@media(min-width:901px),(min-width:701px) and (orientation:landscape){
+ .cgOverview{--cg-header:64px;min-height:100dvh}
+ .cgOverview>header{height:var(--cg-header);min-height:var(--cg-header);padding:0 24px}
+ .cgOverview .brandLogo{width:40px;height:40px}
+ .cgOverview .demoRoleSwitch a{min-height:36px}
+ .cgOverview .cgColumns{height:calc(100dvh - var(--cg-header));min-height:0;margin:0 auto;padding:16px 24px;gap:24px;align-items:stretch}
+ .cgOverview .cgDay{height:100%;min-height:0;display:flex;flex-direction:column}
+ .cgOverview .cgColumnHeading{height:72px;min-height:72px;flex-shrink:0;padding-top:2px}
+ .cgOverview #cg-conversations{padding:0;height:100%;min-height:0}
+ .cgOverview .cgTopPanels{flex:0 0 auto;margin-bottom:12px;align-items:stretch}
+ .cgOverview .cgAttentionGroup{position:relative;display:flex;padding:0;gap:0;min-height:0}
+ .cgOverview .cgAttentionGroup>.cgStatusBadge{position:absolute;top:-26px;left:0;height:20px;min-height:20px;margin:0}
+ .cgOverview .cgWeeklyEngagement{margin-top:0;min-height:0}
+ .cgOverview .cgAttentionGroup>.cgStatusPanel{margin:0;min-height:0}
+ .cgOverview .cgTopPanels+.cgSummary{min-height:0;flex:1 1 0;overflow:hidden}
+ .cgOverview .cgSummaryBody{min-height:0;overflow:auto}
+ .cgOverview .cgTiles{flex-shrink:0}
+ .cgOverview #cg-conversations>.caregiverChat{flex:1 1 0;min-height:0;overflow:hidden}
+ .cgOverview #cg-conversations .careChatLog{flex:1 1 0;min-height:0;max-height:none;overflow:auto}
+}
+@media(min-width:901px) and (max-height:760px),(min-width:701px) and (orientation:landscape) and (max-height:760px){
+ .cgOverview{--cg-header:56px}
+ .cgOverview .cgColumns{padding:8px 20px;gap:20px;min-height:0}
+ .cgOverview .cgColumnHeading{height:58px;min-height:58px;gap:2px}
+ .cgOverview .cgColumnHeading h1,.cgOverview .cgColumnHeading h2{font-size:21px;line-height:1.2}
+ .cgOverview .cgColumnHeading p{font-size:11px;line-height:1.3}
+ .cgOverview .cgAttentionGroup>.cgStatusBadge{top:-22px;height:18px;min-height:18px;padding:2px 7px;font-size:10px}
+ .cgOverview .cgTopPanels{height:210px;margin-bottom:8px;gap:10px}
+ .cgOverview .cgAttentionGroup>.cgStatusPanel{overflow:auto;padding:10px}
+ .cgOverview .cgTopPanels .cgStatusHeading{margin-bottom:6px}
+ .cgOverview .cgTopPanels .cgStatusHeading h2{font-size:16px;line-height:1.2}
+ .cgOverview .cgProgressHeading{margin-bottom:6px}
+ .cgOverview .cgProgressTrack{margin-bottom:8px;height:6px}
+ .cgOverview .cgAttentionGroup .cgStatusRows{gap:5px}
+ .cgOverview .cgAttentionGroup .cgStatusRow{row-gap:0}
+ .cgOverview .cgAttentionGroup .cgStatusRow strong{font-size:11px;line-height:1.3}
+ .cgOverview .cgAttentionGroup .cgStatusRow>span:last-child{font-size:10px;line-height:1.3}
+ .cgOverview .cgAttentionGroup .cgStatusLegend{padding-top:6px;margin-top:7px;font-size:9px}
+ .cgOverview .cgWeeklyEngagement{padding:10px 12px;overflow:hidden}
+ .cgWeeklyEngagement h2{font-size:16px;margin-bottom:3px}
+ .cgWeeklyEngagement .cgChartPeriod{display:none}
+ .cgWeeklyEngagement .cgChartDates{font-size:10px;margin-top:0}
+ .cgWeeklyEngagement .cgWeekAxisTitle{margin:5px 0 3px}
+ .cgWeeklyEngagement .cgWeekChart{grid-template-rows:65px 18px}
+ .cgWeeklyEngagement .cgWeekLegend{margin:5px 0 3px;gap:4px 8px;font-size:9px}
+ .cgWeeklyEngagement .cgChartFoot{height:24px;min-height:24px;font-size:9px}
+ .cgOverview .cgSummary{padding:10px 14px}
+ .cgOverview .cgSummary>h2{display:none}
+ .cgOverview .cgSummary>.eyebrow{font:400 17px Georgia,serif;letter-spacing:0;color:#141e36;margin-bottom:4px}
+ .cgOverview .cgOverviewStamp{font-size:10px;line-height:1.3;margin-bottom:5px;gap:2px 8px}
+ .cgOverview .cgMeta{font-size:10px;margin-top:5px;line-height:1.2}
+ .cgOverview .cgRefresh{top:8px;right:10px;font-size:10px}
+ .cgOverview .cgExplore{font-size:15px;line-height:1.2;margin:8px 0 6px}
+ .cgOverview .cgTiles{gap:8px}
+ .cgOverview .cgTiles>button{min-height:52px;padding:7px 10px;gap:2px 8px}
+ .cgOverview .cgTiles strong{font-size:12px;line-height:1.3}
+ .cgOverview .cgTiles span,.cgOverview .cgTiles span:last-child{font-size:11px;line-height:1.3}
+ .cgOverview #cg-conversations>.caregiverChat{padding:12px}
+ .cgOverview .chatScopeTabs{margin-bottom:8px;gap:6px}
+ .cgOverview .chatScopeTabs button{min-height:44px;padding:7px;font-size:11px}
+ .cgOverview .chatAudience{padding:9px;font-size:11px;line-height:1.4}
+
+
+ .cgOverview .careChatComposer input{min-height:36px;padding:8px!important}
+ .cgOverview .careChatComposer .primary{min-height:36px;padding:8px;min-width:36px}
+ .cgOverview #cg-conversations .chatRefresh{margin-top:6px!important;min-height:30px!important}
+}
+@media(min-width:901px) and (max-height:650px),(min-width:701px) and (orientation:landscape) and (max-height:650px){
+ .cgOverview .cgColumnHeading{height:48px;min-height:48px}
+ .cgOverview .cgColumnHeading h1,.cgOverview .cgColumnHeading h2{font-size:19px}
+ .cgOverview .cgTopPanels{height:180px}
+ .cgWeeklyEngagement .cgWeekChart{grid-template-rows:45px 18px}
+ .cgOverview .cgTiles>button{min-height:46px;padding:5px 8px}
+ .cgOverview .cgSummary>.eyebrow{font-size:15px}
+}
+/* Weekly report preview shares the dashboard’s current data and chart. */
+.cgReportDialog{width:min(780px,calc(100vw - 32px));max-height:88dvh;padding:28px}.cgReportLabel{color:#8e5d40;font-size:11px;letter-spacing:.5px;margin-bottom:8px}.cgReport h2{font:400 28px Georgia,serif;color:#141e36;margin:0 44px 10px 0}.cgReportTimestamp{display:flex;gap:5px 16px;flex-wrap:wrap;font-size:12px;color:#697184;line-height:1.5}.cgReportSource{font-size:13px;color:#596173;line-height:1.5;margin:12px 0 18px}.cgOverview .cgReport .cgWeeklyEngagement{margin:0 0 18px;padding:18px 20px;height:auto;overflow:visible}.cgReport .cgWeeklyEngagement h2{font-size:20px;margin:0 0 5px}.cgReport .cgWeeklyEngagement .cgChartPeriod{display:block;font-size:12px}.cgReport .cgWeeklyEngagement .cgChartDates{font-size:11px}.cgReport .cgWeeklyEngagement .cgWeekAxisTitle{margin:10px 0 5px;font-size:11px}.cgReport .cgWeeklyEngagement .cgWeekChart{grid-template-rows:135px 24px;grid-template-columns:24px minmax(0,1fr)}.cgReport .cgWeeklyEngagement .cgWeekLabels,.cgReport .cgWeeklyEngagement .cgWeekTicks{font-size:11px}.cgReport .cgWeeklyEngagement .cgWeekLegend{font-size:11px;gap:8px 14px;margin:10px 0 6px}.cgReport .cgWeeklyEngagement .cgChartFoot{font-size:11px;height:28px;min-height:28px}.cgReportBubbles{display:flex;flex-direction:column;gap:12px}.cgReportBubble{background:#eff3e8;color:#141e36;padding:18px 20px;border-radius:16px}.cgReportBubbleHeading{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.cgReportBubbleHeading>span{font-size:11px;color:#687951}.cgReportBubbleHeading strong{font-size:13px;font-weight:500}.cgReportBubble p{font-size:15px;line-height:1.6;margin:10px 0 0}.cgReportFootnote{font-size:11px;color:#697184;line-height:1.5;margin:16px 0 0}@media(max-width:500px){.cgReportDialog{padding:22px 16px}.cgReport h2{font-size:24px}.cgOverview .cgReport .cgWeeklyEngagement{padding:14px}.cgReportBubble{padding:16px}.cgReportBubble p{font-size:14px}}
+
+/* Demo guide */
+.demoGuideLink{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 14px;border:1px solid #bccbb0;border-radius:8px;background:#eff3e8;color:#315d50;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap}.demoGuideLink:hover{background:#e2ead8}.demoGuideContent{max-width:1140px;margin:auto;padding:40px 28px 52px;color:#141e36}.demoGuideEyebrow{text-transform:uppercase;letter-spacing:1.6px;font-size:11px;font-weight:700;color:#a56b46;margin:0 0 12px}.demoGuideContent h1{font:500 40px/1.15 Georgia,serif;letter-spacing:-1px;margin:0 0 26px}.demoGuideContent h2{font:500 24px/1.3 Georgia,serif;margin:0 0 12px}.demoGuideContent p{font-size:15px;line-height:1.7}.demoGuideIntro{background:#eff3e8;border:1px solid #dce4d3;border-radius:18px;padding:24px 28px;margin-bottom:24px}.demoGuideIntro p{margin:0}.demoGuideColumns{display:grid;grid-template-columns:1fr 1fr;gap:24px}.demoGuideFeatures{background:#fffefa;border:1px solid #e2ddd3;border-radius:18px;padding:26px 28px}.demoGuideFeatures .demoGuideSubtitle{color:#556b2f;font-size:13px;margin:0 0 22px}.demoGuideFeatures ul{list-style:none;margin:0;padding:0}.demoGuideFeatures li{position:relative;padding-left:17px;margin-bottom:19px}.demoGuideFeatures li:last-child{margin-bottom:0}.demoGuideFeatures li:before{content:'';position:absolute;width:6px;height:6px;border-radius:50%;background:#556b2f;left:0;top:7px}.demoGuideFeatures li strong{font-size:15px}.demoGuideFeatures li p{font-size:14px;color:#59647a;margin:4px 0 0;line-height:1.6}.demoGuideFuture{padding:26px 0 8px}.demoGuideFuture p{margin:0;color:#59647a}.demoGuideBack{margin-top:16px}@media(max-width:760px){.demoGuideColumns{grid-template-columns:1fr}.demoGuideContent{padding:28px 18px 36px}.demoGuideIntro,.demoGuideFeatures{padding:22px}.demoGuideContent h1{font-size:32px}.headerRight{gap:12px}.demoGuideLink{font-size:12px;padding:7px 10px}.demoGuidePage>header{height:auto;min-height:80px;gap:12px;flex-wrap:wrap;padding:14px 18px}}@media(min-width:761px) and (max-width:1100px){.seniorApp>header,.carePage>header{grid-template-columns:1fr auto;gap:8px;height:auto;min-height:100px;padding-top:10px;padding-bottom:10px}.seniorApp>header>.demoRoleSwitch,.carePage>header>.demoRoleSwitch{grid-column:1;grid-row:2;justify-self:start}.seniorApp>header>.headerRight,.carePage>header>.headerRight{grid-column:2;grid-row:1 / 3}}
+
+/* Overview: summary beside a three-row activity feed. */
+.cgOverview .cgSplitOverview{display:grid;grid-template-columns:minmax(0,35fr) minmax(0,65fr);gap:18px;flex:0 0 auto!important;min-height:0!important;padding:16px}
+.cgOverviewIntro{min-width:0;display:flex;flex-direction:column;align-items:flex-start;border-right:1px solid #e3ddd3;padding-right:16px}
+.cgOverviewIntro .eyebrow{font-size:11px;letter-spacing:.7px}.cgOverview .cgOverviewIntro h2{display:block;font:400 21px/1.2 Georgia,serif;margin:10px 0}.cgOverview .cgOverviewIntro .cgMeta{font-size:11px;line-height:1.5;margin:0}.cgOverview .cgOverviewIntro .cgRefresh{position:static;margin-top:auto;padding:10px 0 0;font-size:11px;min-height:34px}
+.cgOverviewFeed{min-width:0}.cgOverview .cgOverviewFeed .cgOverviewStamp{display:flex;flex-wrap:wrap;font-size:10px;line-height:1.4;gap:2px 10px;margin:0 0 6px}.cgOverviewViewport{position:relative}.cgOverviewViewport.hasMore:after{content:'';position:absolute;bottom:0;left:0;right:12px;height:12px;background:linear-gradient(transparent,#fffefa);pointer-events:none}
+.cgOverview .cgOverviewFeed .cgSummaryBody{height:180px;max-height:180px;min-height:180px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#baaa97 transparent;display:block;margin:0;padding:0 8px 0 0}
+.cgOverview .cgFeedRow{box-sizing:border-box;height:60px;min-height:60px;display:grid;grid-template-columns:82px minmax(0,1fr);gap:8px;align-items:center;border-bottom:1px solid #eee8de;font-size:12px;line-height:1.35;padding:5px 0}.cgFeedRow time{color:#8e5d40;font-size:10px;white-space:nowrap;font-variant-numeric:tabular-nums}.cgFeedRow strong{font-weight:500;font-size:11px}.cgOverview .cgFeedRow p{font-size:11px;line-height:1.3;margin:2px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.cgMoreSlot{height:26px;display:flex;justify-content:center}.cgOverviewMore{display:flex;align-items:center;gap:4px;background:transparent;border:0;color:#8e5d40;font-size:11px;padding:4px 12px}
+@media(max-width:700px){.cgOverview .cgSplitOverview{grid-template-columns:1fr;gap:12px}.cgOverviewIntro{border-right:0;border-bottom:1px solid #e3ddd3;padding:0 0 10px}.cgOverview .cgOverviewIntro .cgRefresh{margin-top:4px}.cgOverview .cgOverviewIntro h2{margin:6px 0}}
+
+/* Keep listening and playback controls prominent above the conversation. */
+.seniorApp .chatHeader{display:grid;grid-template-columns:49px minmax(90px,1fr) minmax(160px,1fr) minmax(170px,1fr);gap:12px}
+.seniorApp .cindyIdentity{min-width:0}
+.seniorApp .headerMicControl{display:flex;align-items:center;justify-content:center;gap:10px;min-height:64px;width:100%;padding:12px 14px;border:2px solid #315d50;border-radius:12px;background:#315d50;color:#fffefa;font-size:18px;font-weight:600;line-height:1.35;text-align:center}
+.seniorApp .headerMicControl span{font-size:inherit;color:inherit}
+.seniorApp .headerMicControl svg{flex-shrink:0}
+.seniorApp .headerMicControl.on{background:#24483d;border-color:#24483d}
+.seniorApp .voiceToggle,.seniorApp .voiceToggle.on{margin:0;min-width:0;min-height:60px;width:100%;background:#fffefa;color:#315d50}
+.seniorApp .cindyControls{grid-template-columns:1fr 1fr}
+@media(max-width:1100px){
+.seniorApp .chatHeader{grid-template-columns:49px minmax(0,1fr) 49px minmax(0,1fr)}
+.seniorApp .sandyChatAvatar{grid-column:1;grid-row:1}
+.seniorApp .cindyIdentity{grid-column:2 / 5;grid-row:1}
+.seniorApp .headerMicControl{grid-column:1 / 3;grid-row:2;font-size:16px}
+.seniorApp .voiceToggle{grid-column:3 / 5;grid-row:2;justify-self:stretch;min-width:0;flex-basis:auto;gap:8px;padding:10px 8px}
+.seniorApp .voiceToggle .voiceState{font-size:14px}
+.seniorApp .voiceToggle .voiceAction{font-size:12px}
+}
+@media(max-width:400px){
+.seniorApp .headerMicControl{font-size:15px;padding:10px 7px;gap:6px}
+.seniorApp .voiceToggle svg{width:21px;height:21px}
+.seniorApp .voiceToggle .voiceState{font-size:13px}
+}
+
+/* Senior conversation: explicit audio states and a single message composer. */
+.seniorApp .headerMicControl,.seniorApp .voiceToggle{min-height:76px;background:#fffefa;color:#315d50;border:2px solid #315d50;text-align:left;gap:12px;padding:12px}
+.seniorApp .headerMicControl.on,.seniorApp .voiceToggle.on{background:#315d50;border-color:#315d50;color:#fffefa}
+.seniorApp .chatHeader .voiceLabels{display:flex;flex-direction:column;gap:4px;color:inherit}
+.seniorApp .chatHeader .voiceState{font-size:16px;font-weight:700;line-height:1.3;color:inherit}
+.seniorApp .chatHeader .voiceAction{font-size:13px;font-weight:400;line-height:1.3;color:inherit}
+.seniorApp .cindyComposer form{display:flex;align-items:center;gap:8px;padding:6px;border:1px solid #cfdbc4;border-radius:14px;background:white}
+.seniorApp .cindyComposer input{min-width:0;width:auto;flex:1;border:0;background:transparent;padding:10px 8px;border-radius:7px}
+.seniorApp .cindyComposer .sendControl{display:grid;place-items:center;flex-shrink:0;width:48px;height:48px;border:0;border-radius:10px;background:#315d50;color:white}
+.seniorApp .cindyComposer form:focus-within{outline:2px solid #b8804d;outline-offset:2px}
+.seniorApp .cindyComposer input:focus-visible{outline:none}
+@media(max-width:400px){.seniorApp .chatHeader .voiceState{font-size:14px}.seniorApp .chatHeader .voiceAction{font-size:12px}.seniorApp .headerMicControl,.seniorApp .voiceToggle{gap:7px;padding:9px 7px}.seniorApp .headerMicControl svg,.seniorApp .voiceToggle svg{width:22px;height:22px}}
+
+/* Check-in keeps the complete camera frame and action inside the visible viewport. */
+.seniorApp .conversation.cameraActive{position:fixed;z-index:100;top:calc(var(--camera-top,0px) + env(safe-area-inset-top,0px) + 8px);left:max(8px,env(safe-area-inset-left,0px));right:max(8px,env(safe-area-inset-right,0px));margin:0 auto;width:auto;max-width:860px;height:calc(var(--camera-height,100dvh) - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 16px);min-height:0;overflow:hidden;background:#fffefa;box-shadow:0 0 0 100vmax #f8f6f1}
+.seniorApp .cameraActive .chatHeader{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;padding:12px;flex:0 0 auto}
+.seniorApp .cameraActive .sandyChatAvatar,.seniorApp .cameraActive .cindyIdentity,.seniorApp .cameraActive .welcome,.seniorApp .cameraActive .messages,.seniorApp .cameraActive .cindyComposer{display:none}
+.seniorApp .cameraActive .headerMicControl,.seniorApp .cameraActive .voiceToggle{grid-column:auto;grid-row:auto;width:100%;min-height:60px;justify-self:stretch}
+.seniorApp .cameraActive .voiceAction{display:none}
+.seniorApp .cameraActive .chatBody{display:flex;flex-direction:column;flex:1 1 0;min-height:0;padding:12px;overflow:hidden}
+.seniorApp .cameraActive .activity{display:flex;flex-direction:column;flex:1 1 0;min-height:0;margin:0;border:0;background:transparent;overflow:hidden}
+.checkinInstruction{flex:0 0 auto;margin:0 0 10px;color:#141e36;text-align:center;font-size:clamp(16px,2.5vw,22px);line-height:1.3}
+.seniorApp .cameraActive .checkinCamera{position:relative;flex:1 1 0;min-height:0;overflow:hidden;background:#141e36;border-radius:14px}
+.seniorApp .cameraActive .activity video{display:block;width:100%;height:100%;min-height:0;max-width:none;max-height:none;object-fit:contain;background:#141e36}
+.seniorApp .cameraActive .activityStatus{position:absolute;top:8px;left:50%;transform:translateX(-50%);max-width:95%;padding:8px 12px;background:#141e36cc;color:#fff;border-radius:20px;font-size:16px;white-space:nowrap}
+.seniorApp .cameraActive .activityActions{flex:0 0 auto;padding:12px 0 0}
+.seniorApp .cameraActive .activityActions button{width:100%;min-height:64px;justify-content:center;background:#556b2f;font-size:24px;font-weight:700}
+.seniorApp .cameraActive .error{flex:0 0 auto;max-height:24%;overflow:auto;margin-top:8px;padding:10px}
+@media(max-height:500px){.seniorApp .cameraActive .chatHeader{padding:6px;gap:6px}.seniorApp .cameraActive .headerMicControl,.seniorApp .cameraActive .voiceToggle{min-height:44px;padding:5px 8px}.seniorApp .cameraActive .chatBody{padding:6px}.checkinInstruction{font-size:16px;margin-bottom:6px}.seniorApp .cameraActive .activityActions{padding-top:6px}.seniorApp .cameraActive .activityActions button{min-height:48px;padding:8px;font-size:22px}}
+
+/* Saved Caregiver videos use the browser top layer, above chat and history dialogs. */
+.savedCheckinDialog[open]{position:fixed;inset:auto;top:calc(var(--player-top,0px) + env(safe-area-inset-top,0px) + 8px);left:max(8px,env(safe-area-inset-left,0px));right:max(8px,env(safe-area-inset-right,0px));margin:0 auto;box-sizing:border-box;width:calc(100% - 16px);max-width:900px;height:calc(var(--player-height,100dvh) - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 16px);max-height:none;min-height:0;display:flex;flex-direction:column;gap:12px;padding:16px;border:1px solid #dcd6cc;border-radius:18px;background:#fffefa;color:#141e36;overflow:hidden}
+.savedCheckinDialog::backdrop{background:#141e36b3}
+.savedCheckinDialog h2{flex:0 0 auto;font:600 20px/1.3 Arial,sans-serif;margin:0}
+.savedCheckinFrame{flex:1 1 0;min-height:0;overflow:hidden;background:#141e36;border-radius:12px}
+.savedCheckinDialog .savedCheckinFrame video{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;background:#141e36}
+.savedCheckinControls{display:flex;gap:12px;flex:0 0 auto}
+.savedCheckinDialog .savedCheckinControls button{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;min-height:56px;margin:0;padding:10px;border:1px solid #556b2f;border-radius:10px;background:#fffefa;color:#556b2f;font-size:18px}
+.savedCheckinDialog .savedCheckinControls button:first-child{background:#556b2f;color:#fff}
+.savedCheckinError{flex:0 0 auto;max-height:20%;overflow:auto;font-size:15px;line-height:1.4;margin:0;color:#8a4b27}
+body:has(.savedCheckinDialog[open]){overflow:hidden}
+@media(max-height:450px){.savedCheckinDialog[open]{padding:8px;gap:6px}.savedCheckinDialog h2{font-size:16px}.savedCheckinDialog .savedCheckinControls button{min-height:44px;padding:6px}}
+
+/* Familiar Sandy panel, with a smaller centered camera and stage-specific actions. */
+.seniorApp .cameraActive .chatHeader{grid-template-columns:minmax(80px,.7fr) minmax(0,1fr) minmax(0,1fr);align-items:center}
+.seniorApp .cameraActive .cindyIdentity{display:block}
+.seniorApp .cameraActive .cindyIdentity h2{font-size:24px;color:#141e36}
+.seniorApp .cameraActive .cindyIdentity>span{display:block;font-size:12px;line-height:1.3}
+.seniorApp .cameraActive .activity{width:100%;max-width:640px;align-self:center}
+.seniorApp .cameraActive .activityActions{display:flex;gap:10px}
+.seniorApp .cameraActive .activityActions button{flex:2;min-width:0}
+.seniorApp .cameraActive .activityActions .cancelVideo{flex:1;min-height:56px;padding:10px;border:2px solid #556b2f;background:#fffefa;color:#556b2f;font-size:17px}
+@media(min-height:650px){.seniorApp .cameraActive .cindyComposer{display:block;flex:0 0 auto;padding:10px 12px}.seniorApp .cameraActive .cindyComposer .companionNote{display:none}}
+@media(max-width:500px){.seniorApp .cameraActive .chatHeader{grid-template-columns:1fr 1fr}.seniorApp .cameraActive .cindyIdentity{grid-column:1/-1;display:flex;gap:12px;align-items:center}.seniorApp .cameraActive .cindyIdentity h2{font-size:21px;margin:0}.seniorApp .cameraActive .headerMicControl,.seniorApp .cameraActive .voiceToggle{grid-row:2}.seniorApp .cameraActive .activityActions button{font-size:21px}.seniorApp .cameraActive .activityActions .cancelVideo{font-size:15px}}
+@media(max-height:450px){.seniorApp .cameraActive .cindyIdentity h2{font-size:19px}.seniorApp .cameraActive .activityActions .cancelVideo{min-height:44px}}
+
+/* Speaker colors remain consistent across Senior Member and Caregiver chats. */
+.seniorApp .message.you,.caregiverChat .careChatBubble.speakerSenior{background:#f2dfd0;color:#141e36}
+.seniorApp .message.caregiver,.caregiverChat .careChatBubble.speakerCaregiver{background:#e4eaf2;color:#141e36}
+.seniorApp .message.cindy,.caregiverChat .careChatBubble.speakerSandy{background:#eff2e8;color:#141e36}
+.seniorApp .message .messageName{color:#46516a;font-size:12px;font-weight:600}
+.caregiverChat .careChatBubble strong{color:#46516a;opacity:1;font-size:12px;font-weight:600}
+
+/* Audio states change appearance only; each control owns its grid cells. */
+.seniorApp .chatHeader .headerMicControl,.seniorApp .chatHeader .voiceToggle{width:100%;min-width:0;max-width:100%;margin:0;white-space:normal;overflow-wrap:anywhere}
+.seniorApp .chatHeader .voiceLabels{min-width:0}
+.seniorApp .cameraActive .cindyIdentity{grid-column:1;grid-row:1}
+@media(max-width:500px){.seniorApp .cameraActive .cindyIdentity{grid-column:1 / -1}}
+
+/* Fit tablet workspaces in either orientation, including older iPad Safari. */
+@media(min-width:701px){
+ .seniorApp,.cgOverview{height:var(--app-height,100vh);min-height:0;display:flex;flex-direction:column;overflow:hidden}
+ .seniorApp>header,.cgOverview>header{height:64px;min-height:64px;flex:0 0 auto;padding:0 18px;gap:12px}
+ .seniorApp .headerBrandGroup,.cgOverview .headerBrandGroup{min-width:0;gap:8px}
+ .seniorApp .brand,.cgOverview .brand{font-size:21px;gap:8px;white-space:nowrap}
+ .seniorApp .brandLogo,.cgOverview .brandLogo{width:36px;height:36px}
+ .seniorApp .previewBadge,.cgOverview .previewBadge{display:none}
+ .seniorApp .headerRight,.cgOverview .headerRight{gap:10px}
+ .seniorApp>.layout{flex:1 1 0;min-height:0;width:100%;grid-template-columns:minmax(0,30fr) minmax(0,70fr);gap:16px;padding:14px 18px}
+ .seniorApp .seniorDay{min-height:0;overflow-y:auto;padding-top:0}
+ .seniorApp .conversation:not(.cameraActive){height:100%;min-height:0}
+ .seniorApp .chatBody{min-height:0;flex:1 1 0;-webkit-overflow-scrolling:touch}
+ .seniorApp .chatHeader,.seniorApp .cindyComposer{flex-shrink:0}
+ .seniorApp .chatHeader{padding:12px 16px}
+ .seniorApp .welcome{padding-bottom:10px}
+ .seniorApp .welcome p{font-size:25px}
+ .seniorApp .message{font-size:20px}
+ .seniorApp .dayCard{padding:12px;margin-top:12px}
+ .seniorApp .dayCard .sparkLaunch{min-height:48px;padding:8px;margin-top:8px}
+ .cgOverview .cgColumns{width:100%;height:auto;flex:1 1 0;min-height:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr);--cg-column-top:12px;padding:var(--cg-column-top) 18px 12px;gap:16px;overflow:hidden}
+ .cgOverview .cgDay{height:100%;min-height:0;overflow-y:auto;display:flex;flex-direction:column;padding-right:4px;-webkit-overflow-scrolling:touch}
+ .cgOverview .cgDay>.cgColumnHeading{flex-shrink:0}
+ .cgOverview .cgColumnHeading{height:56px;min-height:56px;padding-top:0}
+ .cgOverview .cgColumnHeading h1,.cgOverview .cgColumnHeading h2{font-size:21px;line-height:1.2}
+ .cgOverview #cg-conversations{height:100%;min-height:0;display:flex;flex-direction:column;padding:0}
+ .cgOverview #cg-conversations>.caregiverChat{height:auto;min-height:0;flex:1 1 0;overflow:hidden;padding:12px}
+ .cgOverview #cg-conversations .careChatLog{height:auto;max-height:none;min-height:0;flex:1 1 0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+ .cgOverview .chatScopeTabs{flex-wrap:nowrap;margin:0 0 8px}
+ .cgOverview .chatScopeTabs button{min-width:0;min-height:48px;padding:8px 5px;font-size:12px}
+ .cgOverview .chatScopeTabs svg{flex-shrink:0}
+ .cgOverview .chatAudience{padding:9px;font-size:12px;line-height:1.4}
+ .cgOverview .careChatComposer{flex-shrink:0}
+ .cgOverview .careChatComposer input{font-size:16px;min-height:44px}
+ .cgOverview .careChatComposer .primary{min-height:44px;min-width:44px}
+ .cgOverview .cgMobileChat{display:none}
+ .cgOverview .cgTopPanels{flex-shrink:0}
+ .cgOverview .cgAttentionGroup>.cgStatusBadge{position:static;margin-bottom:6px}
+ .cgOverview .cgAttentionGroup{display:flex;flex-direction:column}
+}
+@media(min-width:701px) and (max-width:900px){
+ .cgOverview .cgTopPanels{height:auto;grid-template-columns:1fr}
+ .cgOverview .cgSplitOverview{grid-template-columns:1fr;max-height:none}
+ .cgOverview .cgOverviewIntro{border-right:0;border-bottom:1px solid #e3ddd3;padding:0 0 10px}
+ .cgOverview .cgTiles{grid-template-columns:1fr}
+ .seniorApp .cindyIdentity h2{font-size:27px}
+ .seniorApp .chatHeader .voiceState{font-size:15px}
+ .seniorApp .chatHeader .voiceAction{font-size:12px}
+}
+@media(min-width:701px) and (max-height:600px){
+ .seniorApp>header,.cgOverview>header{height:52px;min-height:52px}
+ .cgOverview .cgColumnHeading{height:36px;min-height:36px}
+ .cgOverview .cgColumnHeading p{display:none}
+ .cgOverview .chatAudience{max-height:64px;overflow-y:auto}
+ .cgOverview #cg-conversations .chatRefresh{display:none}
+ .seniorApp .chatHeader .headerMicControl,.seniorApp .chatHeader .voiceToggle{min-height:56px;padding:6px}
+ .seniorApp .cindyComposer{padding:8px 12px}
+ .seniorApp .cindyComposer .companionNote{display:none}
+}
+
+/* One overview card with a fixed action area and an independently scrolling feed. */
+.cgDayWorkspace{min-width:0;background:#fffefa;border:1px solid #e3ddd3;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.cgOverview .cgDayWorkspace .cgSplitOverview{border:0;border-radius:0;background:transparent;box-shadow:none;padding:0;gap:14px;flex:1 1 0!important;min-height:0!important;max-height:none}
+.cgOverviewToolbar{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-shrink:0;margin-bottom:8px}
+.cgOverview .cgOverviewToolbar .cgRefresh{position:static;flex-shrink:0;margin:0;padding:0;min-height:44px;font-size:11px;white-space:nowrap}
+.cgOverview .cgOverviewToolbar .cgOverviewStamp{margin:0;min-width:0;font-size:10px}
+.cgOverview .cgDayWorkspace .cgOverviewFeed{display:flex;flex-direction:column;min-height:0}
+.cgDayWorkspace .cgOverviewViewport{flex:1 1 0;min-height:0;overflow:hidden}
+.cgOverview .cgDayWorkspace .cgSummaryBody{height:100%;min-height:0;max-height:none;overflow-y:auto}
+.cgDayWorkspace .cgMoreSlot{flex-shrink:0;height:26px}
+.cgOverview .cgDayWorkspace .cgExplore{font:400 18px/1.3 Georgia,serif;margin:0;padding-top:10px;border-top:1px solid #e3ddd3;flex-shrink:0}
+.cgOverview .cgDayWorkspace .cgTiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;flex-shrink:0}
+.cgOverview .cgDayWorkspace .cgTiles>button{min-height:56px;padding:8px 10px;display:grid;grid-template-columns:20px minmax(0,1fr);gap:3px 8px;align-content:center}
+.cgOverview .cgDayWorkspace .cgTiles>button>svg{grid-row:1/3;width:19px;height:19px;align-self:center}
+.cgOverview .cgDayWorkspace .cgTiles strong{font-size:12px;line-height:1.3}
+.cgOverview .cgDayWorkspace .cgTiles span{grid-column:2;font-size:11px;line-height:1.3}
+@media(min-width:701px){
+ .cgOverview .cgDay{overflow:hidden;padding-right:0}
+ .cgOverview .cgDay>.cgTopPanels{flex:0 1 32%;min-height:90px;height:auto;overflow-y:auto;margin-bottom:10px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+ .cgOverview .cgDayWorkspace{flex:1 1 0;min-height:0;overflow:hidden}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro h2{font-size:20px;margin:8px 0}
+ .cgOverview .cgDayWorkspace .careError{max-height:50px;overflow-y:auto;margin:0;flex-shrink:0}
+ .cgOverview .cgDayWorkspace .cgSplitOverview{grid-template-columns:minmax(0,30fr) minmax(0,70fr)}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro{border-right:1px solid #e3ddd3;border-bottom:0;padding:0 12px 0 0;overflow-y:auto}
+}
+@media(min-width:701px) and (max-width:1100px){
+ .cgOverview .cgDayWorkspace .cgSplitOverview{display:flex;flex-direction:column;gap:6px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro{display:flex;flex-direction:row;align-items:baseline;gap:10px;border:0;padding:0;flex-shrink:0}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro h2{font-size:18px;margin:0}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgMeta{display:none}
+ .cgOverview .cgDayWorkspace .cgOverviewFeed{flex:1 1 0}
+ .cgOverview .cgOverviewToolbar{justify-content:space-between;gap:8px;margin-bottom:2px}
+ .cgOverview .cgOverviewToolbar .cgOverviewStamp{display:flex;flex-direction:column;align-items:flex-end;line-height:1.3}
+ .cgOverview .cgDayWorkspace .cgFeedRow{grid-template-columns:70px minmax(0,1fr)}
+}
+@media(max-width:700px){
+ .cgOverview .cgDayWorkspace .cgSummaryBody{height:180px;max-height:180px}
+ .cgDayWorkspace .cgOverviewViewport{flex:auto}
+ .cgOverviewToolbar{justify-content:space-between;flex-wrap:wrap}
+ .cgOverview .cgDayWorkspace .cgSplitOverview{flex:0 0 auto!important}
+}
+
+/* Donna’s Day: a single heading above the activity shortcuts. */
+.cgOverview .cgDayWorkspace .cgSplitOverview{display:grid;grid-template-columns:minmax(0,36fr) minmax(0,64fr);gap:16px}
+.cgOverview .cgDayWorkspace .cgOverviewIntro{display:flex;flex-direction:column;align-items:stretch;gap:10px;min-height:0;overflow-y:auto;border-right:1px solid #e3ddd3;border-bottom:0;padding:0 14px 0 0}
+.cgOverview .cgDayWorkspace .cgOverviewIntro h2{font:400 23px/1.2 Georgia,serif;margin:0 0 4px;flex-shrink:0}
+.cgOverview .cgDayWorkspace .cgOverviewIntro .cgTiles{grid-template-columns:minmax(0,1fr);gap:8px;flex-shrink:0}
+.cgOverview .cgDayWorkspace .cgOverviewIntro .cgMeta{display:block;font-size:11px;line-height:1.5;margin-top:auto;padding-top:6px}
+.cgOverview .cgOverviewToolbar .cgOverviewStamp{display:block;line-height:1.4}
+.cgOverview .cgOverviewToolbar .cgOverviewStamp time{display:block}
+@media(min-width:701px) and (max-width:1100px){
+ .cgOverview .cgDayWorkspace{padding:10px}
+ .cgOverview .cgDayWorkspace .cgSplitOverview{grid-template-columns:minmax(0,43fr) minmax(0,57fr);gap:10px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro{padding-right:10px;gap:6px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro h2{font-size:21px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgTiles>button{min-height:48px;padding:6px;gap:2px 5px}
+ .cgOverview .cgOverviewToolbar{flex-wrap:wrap;justify-content:flex-start;gap:0 8px}
+ .cgOverview .cgOverviewToolbar .cgRefresh{min-height:36px}
+}
+@media(max-width:700px){
+ .cgOverview .cgDayWorkspace .cgSplitOverview{grid-template-columns:minmax(0,1fr)}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro{border-right:0;border-bottom:1px solid #e3ddd3;padding:0 0 12px;overflow:visible}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgMeta{margin-top:0}
+}
+
+/* A shared grid keeps all four card borders inside the caregiver workspace. */
+@media(min-width:701px){
+ .cgOverview .cgDay{display:grid;grid-template-rows:56px minmax(0,.85fr) minmax(0,1.15fr);row-gap:12px;height:100%;min-height:0;overflow:hidden}
+ .cgOverview .cgDay>.cgColumnHeading{height:56px;min-height:0}
+ .cgOverview .cgDay>.cgTopPanels{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);height:100%;min-height:0;margin:0;gap:12px;overflow:visible;align-items:stretch}
+ .cgOverview .cgDay>.cgTopPanels>.cgAttentionGroup{display:flex;min-height:0;height:100%;gap:0}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusPanel{height:100%;min-height:0;overflow-y:auto;margin:0;padding:12px}
+ .cgOverview .cgDay>.cgTopPanels>.cgWeeklyEngagement{height:100%;min-height:0;overflow-y:auto;margin:0;padding:12px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusHeading{align-items:center;gap:6px;margin-bottom:8px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusHeading h2{font-size:18px;margin:0}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusBadge{position:static;height:auto;min-height:18px;padding:3px 7px;font-size:10px;line-height:1.2;margin:0}
+ .cgOverview .cgDay>.cgTopPanels .cgProgressHeading{margin-bottom:6px}
+ .cgOverview .cgDay>.cgTopPanels .cgProgressTrack{margin-bottom:10px;height:7px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusRows{gap:6px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusLegend{padding-top:6px;margin-top:8px}
+ .cgOverview .cgDay>.cgDayWorkspace{height:100%;min-height:0;margin:0}
+ .cgOverview #cg-conversations>.cgColumnHeading{height:68px;min-height:68px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgTiles>button{min-height:48px;padding:6px 8px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgTiles{gap:6px}
+}
+@media(min-width:701px) and (max-height:700px){
+ .cgOverview .cgDay{grid-template-rows:44px minmax(0,.85fr) minmax(0,1.15fr);row-gap:8px}
+ .cgOverview .cgDay>.cgColumnHeading{height:44px}
+ .cgOverview #cg-conversations>.cgColumnHeading{height:52px;min-height:52px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusHeading h2{font-size:16px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusRow{row-gap:0}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusRows{gap:4px}
+ .cgOverview .cgDay>.cgTopPanels>.cgWeeklyEngagement,.cgOverview .cgDay>.cgTopPanels .cgStatusPanel{padding:9px}
+ .cgOverview .cgDayWorkspace{padding:10px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgTiles>button{min-height:44px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgMeta{font-size:10px}
+}
+
+/* Routine counts are the primary signal; amber zero is not a problem. */
+.cgCountCircle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;flex-shrink:0;border-radius:50%;font-size:22px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.countAmber{background:#f9dfa0;color:#6e4b00;border:2px solid #d19b21}
+.countGreen{background:#556b2f;color:#fff;border:2px solid #556b2f}
+.countRed{background:#b63e32;color:#fff;border:2px solid #b63e32}
+.countNeutral{background:#e5e7eb;color:#596173;border:2px solid #89909b}
+.cgOverview .cgAttentionGroup .cgStatusRow{grid-template-columns:40px minmax(0,1fr);gap:10px;min-height:40px}
+.cgOverview .cgAttentionGroup .cgStatusRow strong{font-size:13px;line-height:1.3}
+@media(min-width:701px){
+ .cgOverview .cgDay{grid-template-rows:56px minmax(0,1fr) 270px;gap:12px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusPanel,.cgOverview .cgDay>.cgTopPanels>.cgWeeklyEngagement{overflow:visible}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusPanel{display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusHeading{margin:0;flex-shrink:0}
+ .cgOverview .cgDay>.cgTopPanels .cgProgressHeading{margin:0}
+ .cgOverview .cgDay>.cgTopPanels .cgProgressTrack{margin:0;flex-shrink:0}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusRows{gap:6px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusLegend{margin:0;padding-top:6px;flex-shrink:0}
+ .cgOverview .cgDayWorkspace{padding:12px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro{overflow:visible;gap:6px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro h2{font-size:22px;margin:0}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgTiles>button{min-height:40px;padding:5px 8px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgTiles{gap:5px}
+ .cgOverview .cgDayWorkspace .cgOverviewIntro .cgMeta{font-size:10px;line-height:1.3;padding-top:0;margin-top:auto}
+ .cgOverview .cgDayWorkspace .cgSummaryBody{overflow-y:auto}
+ .cgOverview .cgDayWorkspace .cgMoreSlot{height:22px}
+ .cgOverview .cgDay>.cgTopPanels>.cgWeeklyEngagement .cgChartFoot{height:auto;min-height:0;overflow:visible}
+}
+@media(min-width:701px) and (max-height:740px){
+ .cgOverview .cgDay{grid-template-rows:44px minmax(0,1fr) 250px;gap:8px}
+ .cgOverview .cgDay>.cgColumnHeading{height:44px}
+ .cgOverview #cg-conversations>.cgColumnHeading{height:52px;min-height:52px}
+ .cgOverview .cgDayWorkspace{padding:10px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusPanel,.cgOverview .cgDay>.cgTopPanels>.cgWeeklyEngagement{padding:9px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusRows{gap:4px}
+ .cgOverview .cgAttentionGroup .cgStatusRow{min-height:34px;grid-template-columns:34px minmax(0,1fr)}
+ .cgCountCircle{width:34px;height:34px;font-size:20px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusLegend{font-size:9px}
+ .cgOverview .cgDay>.cgTopPanels .cgStatusHeading h2{font-size:16px}
+ .cgOverview .cgDay>.cgTopPanels .cgWeekChart{grid-template-rows:60px 18px}
+ .cgOverview .cgDay>.cgTopPanels .cgChartPeriod{display:none}
+}
+
+
+/* Daily Spark shares Sandy's chat body with the conversation. */
+.sparkActive .welcome,.sparkActive .chatBody>div:last-child:empty{display:none}
+.sparkActive .sparkCard{margin:0;min-width:0;padding:14px;background:#EEF5FA;border-color:#CBDDEB}
+.sparkActive .sparkCard h3{font-size:20px;line-height:1.3;margin:8px 0}
+.sparkActive .sparkSteps{margin:10px 0 14px}
+.sparkActive .sparkFeedback{margin:8px 0;line-height:1.45;font-weight:600}
+.sparkActive .sparkActions{margin-top:12px;gap:6px}
+.sparkActive .sparkActions button{flex:1 0 42%;padding:7px 8px}
+.sparkActive .sparkActions .sparkNext{flex-basis:100%}
+.sparkActive .messages{min-width:0;min-height:0;max-height:125px;overflow:auto;overscroll-behavior:contain;margin-top:12px;padding-right:4px}
+@media (max-width:760px){
+ .conversation.sparkActive{height:auto;min-height:0}
+ .sparkActive .chatBody{padding:12px}
+}
+@media (min-width:761px){
+ .seniorApp .sparkActive .chatBody{display:grid;grid-template-columns:minmax(0, 45fr) minmax(0, 55fr);grid-template-rows:minmax(0,1fr) auto;gap:0 12px;padding:12px}
+ .sparkActive .sparkCard{align-self:start;max-height:100%;overflow:auto;overscroll-behavior:contain}
+ .sparkActive .messages{max-height:none;margin-top:0}
+ .sparkActive .chatBody>.error{grid-column:1/-1}
+}
+
+.activityComingSoon {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #cdd9c2;
+  color: #315d50;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.activityComingSoon p {
+  margin: 0;
+}
+.activityComingSoon .eyebrow {
+  margin-bottom: 3px;
+  color: inherit;
+}

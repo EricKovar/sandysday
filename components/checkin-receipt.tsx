@@ -1,11 +1,7 @@
 'use client';
-import {useId,useRef,useState} from 'react';
-import {CheckCircle2,Play,Pause,X,Video} from 'lucide-react';
+import {CheckCircle2} from 'lucide-react';
+import {SavedCheckinVideo} from './saved-checkin-video';
 export function CheckinReceipt({videoId,createdAt,demo=false,demoRole='senior'}:{videoId:string;createdAt:number;demo?:boolean;demoRole?:'senior'|'caregiver'}){
- const [open,setOpen]=useState(false),[playing,setPlaying]=useState(false),[error,setError]=useState('');
- const video=useRef<HTMLVideoElement>(null),playerId=useId(),viewButton=useRef<HTMLButtonElement>(null);
  const src='/api/checkins?video='+encodeURIComponent(videoId)+(demo?'&demo=1&role='+demoRole:'');
- function close(){video.current?.pause();setOpen(false);setPlaying(false);setError('');viewButton.current?.focus()}
- async function toggle(){const player=video.current;if(!player)return;if(!player.paused){player.pause();return}try{await player.play();setError('')}catch{setError('Playback could not start. Please try the video’s play control.')}}
- return <article className="checkinReceipt" aria-label="Saved video check-in"><CheckCircle2 size={21}/><div><div className="receiptHeading"><strong>Video check-in completed</strong><time dateTime={new Date(createdAt).toISOString()}>{new Date(createdAt).toLocaleString([],{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</time></div><p>Your video was saved to <strong>Saved videos</strong>.</p><button ref={viewButton} className="secondary receiptVideoButton" aria-expanded={open} aria-controls={playerId} onClick={()=>open?close():setOpen(true)}><Video size={19}/>{open?'Hide video':'View video'}</button>{open&&<div id={playerId} className="receiptPlayer"><video ref={video} controls playsInline preload="metadata" src={src} aria-label="Saved medication check-in video" onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} onEnded={()=>setPlaying(false)} onError={()=>setError('This video could not be loaded. Close it and try again.')} /><div className="receiptPlayerControls"><button className="secondary" onClick={toggle}>{playing?<Pause size={20}/>:<Play size={20}/>} {playing?'Pause video':'Play video'}</button><button className="secondary" onClick={close}><X size={20}/> Close video</button></div>{error&&<p role="alert">{error}</p>}</div>}</div></article>
+ return <article className="checkinReceipt" aria-label="Saved video check-in"><CheckCircle2 size={21}/><div><div className="receiptHeading"><strong>Video check-in completed</strong><time dateTime={new Date(createdAt).toISOString()}>{new Date(createdAt).toLocaleString([],{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</time></div><p>{demoRole==='senior'?'Your check-in is saved and shared with your Caregiver.':'This check-in is saved in Saved check-ins.'}</p>{demoRole==='caregiver'&&<SavedCheckinVideo src={src}/>}</div></article>
 }

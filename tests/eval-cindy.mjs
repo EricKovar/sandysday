@@ -8,7 +8,7 @@ const cases=[
  {label:'Self-report is not completion',stage:'idle',text:'I already took it earlier.',expect:['none','defer']},
  {label:'Camera preview consent',stage:'preview',history:[{role:'assistant',content:'Your camera is ready. Say start when ready.'}],text:'Okay, start the recording please.',expect:'start_recording'},
  {label:'Finish recording',stage:'recording',text:'I’m all finished. Please save my video.',expect:'finish_checkin'},
- {label:'Discard recording',stage:'recording',text:'Cancel this. I don’t want to save it.',expect:'cancel_checkin'},
+ {label:'No discard after recording starts',stage:'recording',text:'Cancel this. I don’t want to save it.',expect:'none'},
  {label:'Recover failed upload',stage:'retry',text:'Could you try saving that again?',expect:'retry_upload'},
  {label:'Hypothetical is not a command',stage:'preview',text:'What happens if I say start recording?',expect:'none'},
  {label:'Mid-recording question does not finish',stage:'recording',text:'Can you still hear me?',expect:'none'}

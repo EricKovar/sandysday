@@ -7,13 +7,13 @@ test('demo entry needs no account, issues a protected session cookie, and resume
  const resume=await f.demoEntry.GET(new Request('https://preview.invalid/demo',{headers:{Cookie:cookie}}));assert.equal(resume.headers.get('set-cookie'),null);const fresh=await f.demoEntry.GET(new Request('https://preview.invalid/demo?new=1',{headers:{Cookie:cookie}}));assert.notEqual(fresh.headers.get('set-cookie'),cookie);
 });
 test('demo identity never falls back to the signed-in real account; forged and expired cookies fail',async()=>{
- const f=fixture(),cookie=await guest(f);const user=await f.appUser.getAppUser(req('/api/conversation',cookie));assert.ok(user.userId.startsWith('demo:'));assert.equal(user.fullName,'Susan');assert.equal((await f.appUser.getAppUser(new Request('https://preview.invalid/api/conversation'))).userId,'test-a');assert.equal(await f.appUser.getAppUser(req('/api/conversation','forged=1')),null);
+ const f=fixture(),cookie=await guest(f);const user=await f.appUser.getAppUser(req('/api/conversation',cookie));assert.ok(user.userId.startsWith('demo:'));assert.equal(user.fullName,'Donna');assert.equal((await f.appUser.getAppUser(new Request('https://preview.invalid/api/conversation'))).userId,'test-a');assert.equal(await f.appUser.getAppUser(req('/api/conversation','forged=1')),null);
  const expired=await f.demoSession.createDemoToken(Date.now()-f.demoSession.DEMO_TTL-1000);assert.equal(await f.demoSession.demoUser('__Host-sandys-demo='+expired),null);const tampered=cookie.slice(0,-4)+'xxxx';assert.equal(await f.demoSession.demoUser(tampered),null);
 });
 test('anonymous demo browsers cannot read each other’s chats or recordings, or a real account’s video',async()=>{
  const f=fixture();const realId=randomUUID();assert.equal((await f.route.POST(request(realId))).status,200);f.as(null);const a=await guest(f),b=await guest(f);const videoId=randomUUID();assert.equal((await upload(f,a,videoId)).status,200);assert.equal((await f.route.GET(req('/api/checkins?video='+videoId,a))).status,200);assert.equal((await f.route.GET(req('/api/checkins?video='+videoId,b))).status,404);assert.equal((await f.route.GET(req('/api/checkins?video='+realId,a))).status,404);
  await f.events.POST(req('/api/events',a,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({role:'user',content:'Guest A private demo message',id:randomUUID()})}));
- const chatA=await (await f.conversation.GET(req('/api/conversation',a))).json(),chatB=await (await f.conversation.GET(req('/api/conversation',b))).json();assert.ok(chatA.messages.some(m=>m.content.includes('Guest A')));assert.equal(chatB.messages.length,0);assert.notEqual(chatA.user_id,chatB.user_id);assert.equal((await f.route.GET(new Request('https://preview.invalid/api/checkins'))).status,401);
+ const chatA=await (await f.conversation.GET(req('/api/conversation',a))).json(),chatB=await (await f.conversation.GET(req('/api/conversation',b))).json();assert.ok(chatA.messages.some(m=>m.content.includes('Guest A')));assert.equal(chatB.messages.filter(m=>!m.id.startsWith('demo-')).length,0);assert.notEqual(chatA.user_id,chatB.user_id);assert.equal((await f.route.GET(new Request('https://preview.invalid/api/checkins'))).status,401);
  assert.equal((await f.care.GET()).status,401);assert.equal((await f.chat.GET(req('/api/cindy-chat?scope=private&senior=test-a',a))).status,403);
 });
 test('voice supports repeated role-switch reconnects and keeps a bounded per-network limit',async()=>{
@@ -32,4 +32,29 @@ test('public guest access does not grant unlisted signed-in accounts access to t
  f.headers({'oai-authenticated-user-id':'real-tester','oai-authenticated-user-email':'tester@example.invalid'});assert.equal((await f.nativeAuth.getChatGPTUser()).userId,'real-tester');
  f.headers({'oai-authenticated-user-id':'outsider','oai-authenticated-user-email':'outsider@example.invalid'});assert.equal(await f.nativeAuth.getChatGPTUser(),null);assert.equal((await f.conversation.GET()).status,401);assert.equal((await f.care.GET()).status,401);
  const cookie=await guest(f);assert.ok((await f.appUser.getAppUser(req('/api/conversation',cookie))).userId.startsWith('demo:'));
+});
+
+test('Start New Demo replaces the chat and activity session and rejects requests from the old page',async()=>{
+ const f=fixture();f.as(null);
+ const oldCookie=await guest(f);
+ const oldUser=await f.demoSession.demoUser(oldCookie);
+ const post=(path,cookie,body,account)=>req(path,cookie,{method:'POST',headers:{'Content-Type':'application/json','X-Sandys-Demo-Account':account},body:JSON.stringify(body)});
+ const oldMessage={role:'user',content:'Conversation from the previous demo',id:randomUUID()};
+ assert.equal((await f.events.POST(post('/api/events',oldCookie,oldMessage,oldUser.userId))).status,200);
+ assert.equal((await f.spark.POST(post('/api/spark',oldCookie,{operation:'start',revision:0,requestId:randomUUID()},oldUser.userId))).status,200);
+ const reset=await f.demoEntry.POST(post('/demo',oldCookie,{},oldUser.userId));
+ assert.equal(reset.status,303);
+ assert.equal(reset.headers.get('cache-control'),'no-store');
+ const freshCookie=reset.headers.get('set-cookie').split(';')[0];
+ const freshUser=await f.demoSession.demoUser(freshCookie);
+ assert.notEqual(freshUser.userId,oldUser.userId);
+ assert.equal((await f.events.POST(post('/api/events',freshCookie,{...oldMessage,id:randomUUID()},oldUser.userId))).status,401);
+ const fresh=await (await f.conversation.GET(req('/api/conversation',freshCookie,{headers:{'X-Sandys-Demo-Account':freshUser.userId}}))).json();
+ assert.deepEqual(fresh.messages.map(message=>message.id),['demo-welcome','demo-activities']);
+ assert.equal(fresh.spark,null);
+ assert.equal(fresh.move,null);
+ const start=await f.spark.POST(post('/api/spark',freshCookie,{operation:'start',revision:0,requestId:randomUUID()},freshUser.userId));
+ assert.equal(start.status,200);
+ const afterStart=await (await f.conversation.GET(req('/api/conversation',freshCookie))).json();
+ assert.ok(afterStart.messages.every(message=>message.id.startsWith('demo-')));
 });
